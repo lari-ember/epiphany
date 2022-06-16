@@ -1,0 +1,366 @@
+/* body */
+/* tags */
+
+body {
+    background-color: #333;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+main {
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    min-width: 280px;
+    max-width: 1000px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* super tags */
+
+section {
+    width: 99%;
+    justify-content: space-between;
+    align-items: center;
+    height: 95vh;
+    background: linear-gradient(to right,
+            rgb(106, 106, 106) 0%,
+            rgb(108, 224, 195) 90%,
+            paleturquoise 100%);
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #555555;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    padding: 0px 5%;
+}
+
+nav ul {
+    display: flex
+}
+
+nav ul li a {
+    margin: 30px;
+    font-family: "myriad pro regular";
+    font-size: 15px;
+    color: #dadada;
+    font-weight: 700;
+
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(240, 240, 240);
+    font-size: 22px;
+}
+
+.active {
+    font-weight: bold;
+    color: rgb(182, 205, 255)
+}
+
+/* style texts */
+
+.content-txts h2 {
+    font-family: Calibri;
+    font-weight: bold;
+    color: #cacaca;
+    font-size: 30px;
+}
+
+.content-txts h1 {
+    font-family: Calibri;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(240, 240, 240);
+    font-size: 60px;
+}
+
+.content-txts p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(235, 235, 235);
+    font-size: 28px;
+    line-height: 30px;
+}
+
+.content-txts {
+    line-height: 0px;
+    margin: 45px 0px 25px;
+}
+
+.content-txts {
+    position: absolute;
+    left: 13%;
+    top: 42%;
+    transform: translate(-13%, -42%);
+}
+
+/* buttons */
+
+.content-txts button.btn1{
+    border: none;
+    width: 130px;
+    height: 42px;
+    border-radius: 10px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+    background-color: paleturquoise;
+}
+
+button.btn1:hover {
+    background-color: #555555;
+    color: azure;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+/* style of the image on background banner */
+
+.imgbg {
+    height: 365px;
+    position: absolute;
+    bottom: 13.7%;
+    left: 55%;
+    
+}
+
+/* content */
+.content-about {
+    width: 80%;
+    height: 330px;
+    background-color: rgb(156, 156, 156);
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: -6% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content-about img {
+    height: 240px;
+}
+
+.text-about {
+    width: 550px;
+    height: auto;
+}
+
+.text-about h2 {
+    color: #2f4239;
+    font-family: "myriad pro";
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 0px;
+}
+
+.text-about h3 {
+    color: #1b1f1d;
+    font-size: 12px;
+    font-family: "myriad pro";
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.text-about P {
+    color: #1b1f1d;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* tool selection*/
+
+.tools {
+    height: 600px;
+    background-color: #333333;
+}
+
+.tools-texts p:nth-child(1) {
+    font-family: Calibri;
+    font-weight: bold;
+    color: #b2e0c9;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.tools-texts p:nth-child(2) {
+    font-family: Calibri;
+    font-weight: bold;
+    color: #93ada0;
+    font-size: 15px;
+    line-height: 0px;
+}
+
+.tools-texts p:nth-child(3) {
+    font-family: Calibri;
+    color: #93e5bc;
+}
+
+.tools-texts {
+    width: 500px;
+    margin: 50px 0px 0px 50px;
+}
+
+.box {
+    width: 200px;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(92, 133, 139)
+}
+
+.box-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.box span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(185, 185, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Calibri;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.box p.headid {
+    
+    font-family: Calibri;
+    font-size: 18px;
+    color:rgb(235, 235, 235);
+    line-height: 0px;
+}
+
+.box p.detail {
+    color: #f0f0f0;
+    font-family: Calibri;
+    text-align: center;
+    margin: 20px;
+}
+
+button.bts {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5%;
+    margin-bottom: 15px;
+    background-color: #cacaca;
+}
+
+/* hr */
+
+hr {
+    background: linear-gradient(to right,
+    rgb(106, 106, 106) 0%,
+    rgb(108, 224, 195) 90%,
+    paleturquoise 100%);
+    margin: 20px 10px 20px 10px;
+}
+
+/* contact */
+
+.contact div{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p {
+    color: floralwhite;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact h2 {
+    color: floralwhite;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid floralwhite;
+}
+
+.contact button {
+    margin: 5px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(143, 143, 143);
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #555555;
+    color: azure;
+    font-weight: bold;
+}   
+/* footer */
+
+footer {
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+footer p:nth-child(1) {
+    font-weight: bold;
+    color: #729b88;
+    line-height: 10px;
+    font-size: 14px;
+}
+
+footer p:nth-child(2) {
+    font-weight: bold;
+    color: #729b88;
+    line-height: 10px;
+    font-size: 16px;
+    width: 500px;
+    text-align: center;
+}
+
+.copy {
+    color: #cacaca;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%); 
+}
