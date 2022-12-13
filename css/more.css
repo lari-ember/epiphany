@@ -1,118 +1,137 @@
 /* stylelint-disable selector-list-comma-newline-after */
 .container {
   max-width: 1500px;
-}  
+}
 
+.display-4 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
   .display-4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-  @media (min-width: 768px) {
-    .display-4 {
-      font-size: 3rem;
-    }
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
   }
-  
-  .card-img-right {
-    height: 100%;
-    border-radius: 0 3px 3px 0;
-  }
-  
-  .flex-auto {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-  }
-  
-  .h-250 { height: 250px; }
-  @media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
-  }
-  
-  /*
+}
+
+/*
    * Nome do blog e descriÃ§Ã£o
    */
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
   .blog-title {
-    margin-bottom: 0;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 3.5rem;
   }
-  .blog-description {
-    font-size: 1.1rem;
-    color: #999;
-  }
-  
-  @media (min-width: 40em) {
-    .blog-title {
-      font-size: 3.5rem;
-    }
-  }
-  
-  /* PaginaÃ§Ã£o */
-  .blog-pagination {
-    margin-bottom: 4rem;
-  }
-  .blog-pagination > .btn {
-    border-radius: 2rem;
-  }
-  
-  /*
-   * Posts do blog
+}
+
+/* PaginaÃ§Ã£o */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+.blog-pagination>.btn {
+  border-radius: 2rem;
+}
+
+/*
+  Posts do blog
    */
-  .blog-post {
-    margin-bottom: 4rem;
-  }
-  .blog-post-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-  }
-  .blog-post-meta {
-    margin-bottom: 1.25rem;
-    color: #999;
-  }
-  
-  /*
+
+.post {
+  background: linear-gradient(to top,
+      rgb(51, 51, 51) 0%,
+      rgba(232, 207, 95, 0.56) 90%,
+      rgba(255, 238, 163, 0.56) 100%)
+}
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
    * Footer
    */
-  .blog-footer {
-    padding: 2.5rem 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-  }
-  .blog-footer p:last-child {
-    margin-bottom: 0;
-  }
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
 
 body {
-    background-color: rgb(51, 51, 51);
-    color: beige;
+  background-color: rgb(51, 51, 51);
+  color: beige;
 }
 
 div {
-    background-color: rgb(37, 37, 37);
+  background-color: rgb(37, 37, 37);
 }
 
 main {
-    background-color: rgb(51, 51, 51);
-    padding: 20px;
-    border-radius: 10px;
-  
-    min-width: 280px;
-    margin: auto;
-  }
+  background-color: rgb(51, 51, 51);
+  padding: 20px;
+  border-radius: 10px;
+
+  min-width: 280px;
+  margin: auto;
+}
 
 .olar {
-    background: linear-gradient(to right,
-  rgb(51, 51, 51) 0%,
-  rgb(108, 224, 195) 90%,
-  paleturquoise 100%);
+  background: linear-gradient(to right,
+      rgb(51, 51, 51) 0%,
+      rgb(108, 224, 195) 90%,
+      paleturquoise 100%);
 }
 
 .post {
   background: linear-gradient(to top,
-  rgb(51, 51, 51) 0%,
-  rgba(108, 224, 195, 0.56) 90%,
-  rgba(175, 238, 238, 0.56) 100%)
+      rgb(51, 51, 51) 0%,
+      rgba(108, 224, 195, 0.56) 90%,
+      rgba(175, 238, 238, 0.56) 100%)
 }
 
 p {
@@ -129,6 +148,7 @@ p {
   color: #8e8e8e;
   transition: color .15s ease-in-out;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
@@ -139,4 +159,3 @@ p {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
-
