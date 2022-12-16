@@ -56,4 +56,8 @@ body {
 
 .rounded-circle {
     max-width: 70%;
+    padding: 5px;
+    background-color: rgb(199, 255, 238);
+    box-shadow: 1px 1px 5px rgb(199, 255, 238),
+    -1px -1px 5px rgb(199, 255, 238);
 }
