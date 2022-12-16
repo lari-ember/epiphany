@@ -159,3 +159,10 @@ p {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
+
+.back1 {
+  background-image: url("../images/jalaish-ill.png");
+  width: 200px;
+  height: 295px;
+  background-size: 260%;
+}
