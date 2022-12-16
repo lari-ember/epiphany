@@ -139,7 +139,7 @@ p {
   letter-spacing: 1px;
   color: rgb(240, 240, 240);
   text-align: left;
-  font-size: 30px;
+  font-size: 20px;
   min-width: 200px;
   max-width: 1000px;
 }
@@ -165,4 +165,12 @@ p {
   width: 200px;
   height: 295px;
   background-size: 260%;
+}
+
+li {
+  margin: 10px;
+}
+
+hr {
+  background-color: rgb(143, 143, 143);
 }
