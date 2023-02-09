@@ -24,36 +24,40 @@
 
 Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
 Parse.serverURL = 'https://parseapi.back4app.com/'
-
-//Saving your First Data Object on Back4App
-async function saveNewPerson() {
-  const person = new Parse.Object("Person");
-
-  person.set("name", "John Snow");
-  person.set("age", 27);
-  try {
-    let result = await person.save()
-    alert('New object created with objectId: ' + result.id);
-    } catch(error) {
-        alert('Failed to create new object, with error code: ' + error.message);
-    }
-  } 
-
-//Reading your First Data Object from Back4App
-async function retrievePerson() {
-  const query = new Parse.Query("Person");
-  
-  try {
-    const person = await query.get("mhPFDlCahj");
-    const name = person.get("name");
-    const age = person.get("age");
-  
-    alert(`Name: ${name} age: ${age}`);
-  } catch (error) {
-    alert(`Failed to retrieve the object, with error code: ${error.message}`);
-  }
-}
 </script>
+
+  <script src="https://cdn.back4app.com/libs/parse/2.8.4/parse.min.js"></script>
+    <script>
+      Parse.initialize("<APP_ID>", "<JAVASCRIPT_KEY>");
+      Parse.serverURL = "https://parseapi.back4app.com/";
+  async function saveNewPerson() {
+    const person = new Parse.Object("Person");
+
+    person.set("name", "John Snow");
+    person.set("age", 27);
+    try {
+      let result = await person.save();
+      alert('New object created with objectId: ' + result.id);
+    } catch (error) {
+      alert('Failed to create new object, with error code: ' + error.message);
+    }
+  }
+
+  async function retrievePerson() {
+    const query = new Parse.Query("Person");
+
+    try {
+      const person = await query.get("mhPFDlCahj");
+      const name = person.get("name");
+      const age = person.get("age");
+
+      alert(`Name: ${name} age: ${age}`);
+    } catch (error) {
+      alert(`Failed to retrieve the object, with error code: ${error.message}`);
+    }
+  }
+</script>
+
 
   <title>Home — The Last Epiphany</title>
 
@@ -278,6 +282,8 @@ async function retrievePerson() {
 </head>
 
 <body>
+    <button onclick="saveNewPerson()">Save new person</button>
+    <button onclick="retrievePerson()">Retrieve person</button>
 
   <header class="site-header sticky-top py-1">
     <nav class="container d-flex flex-column flex-md-row justify-content-between">
