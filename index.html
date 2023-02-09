@@ -33,7 +33,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
   async function saveNewPerson() {
     const person = new Parse.Object("Person");
 
-    person.set("name", "row bow");
+    person.set("name", "John bow");
     person.set("age", 27);
     try {
       let result = await person.save();
