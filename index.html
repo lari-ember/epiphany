@@ -33,7 +33,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
   async function saveNewPerson() {
     const person = new Parse.Object("Person");
 
-    person.set("name", "John Snow");
+    person.set("name", "row bow");
     person.set("age", 27);
     try {
       let result = await person.save();
@@ -43,12 +43,12 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
     }
   }
 
-  async function retrievePerson() {
+    async function retrievePerson(name) {
     const query = new Parse.Query("Person");
+    query.equalTo("name", name);
 
     try {
-      const person = await query.get("mhPFDlCahj");
-      const name = person.get("name");
+      const person = await query.first();
       const age = person.get("age");
 
       alert(`Name: ${name} age: ${age}`);
@@ -56,6 +56,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
       alert(`Failed to retrieve the object, with error code: ${error.message}`);
     }
   }
+
 </script>
 
 
