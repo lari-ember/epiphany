@@ -17,12 +17,13 @@
   <meta name="author" content="Larissa Ember, Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.98.0">
 
-<script>
-var Parse = require('parse/node');
+<script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script type="text/javascript" type="text/javascript">
+    Parse.initialize("APP_ID","JS_KEY"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/'
+  </script>
 
-Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd
-"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-Parse.serverURL = 'https://parseapi.back4app.com/'
+<script>
 
 Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd
 "); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
