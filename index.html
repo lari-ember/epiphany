@@ -1,446 +1,366 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="The Last Epiphany, como o nome sugere, é um dite onde será desenvolvida a epifania de uma moça, chamada Larissa. Ela inclui nestas páginas: Crônicas, artigos, seu portfólio de projetos, perfil social e alguns experimentos no mundo da programação. Receba as boas vindas.">
-    <meta property="og:title" content="The Last Epiphany"/>
-    <meta property="og:type" content="blog"/>
-    <meta property="og:description" content="The Last Epiphany, como o nome sugere, é um dite onde será desenvolvida a epifania de uma moça, chamada Larissa. Ela inclui nestas páginas: Crônicas, artigos, seu portfólio de projetos, perfil social e alguns experimentos no mundo da programação. Receba as boas vindas."/>
-    <meta property="og:image" content="./images/jujusamaaa.png" />
-
-    <meta property="twitter:title" content="The Last Epiphany"/>
-    <meta property="twitter:description" content="The Last Epiphany, como o nome sugere, é um dite onde será desenvolvida a epifania de uma moça, chamada Larissa. Ela inclui nestas páginas: Crônicas, artigos, seu portfólio de projetos, perfil social e alguns experimentos no mundo da programação. Receba as boas vindas."/>
-    <meta name="twitter:image" content="./images/jujusamaaa.png"/>
-  <meta name="author" content="Larissa Ember, Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.98.0">
-
-<script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
-<script type="text/javascript" type="text/javascript">
-    Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    Parse.serverURL = 'https://parseapi.back4app.com/'
-
-Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-Parse.serverURL = 'https://parseapi.back4app.com/'
-</script>
-
-  <script src="https://cdn.back4app.com/libs/parse/2.8.4/parse.min.js"></script>
-    <script>
-      Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc","PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd");
-      Parse.serverURL = "https://parseapi.back4app.com/";
-  async function saveNewPerson() {
-    const person = new Parse.Object("Person");
-
-    person.set("name", "John bow");
-    person.set("age", 27);
-    try {
-      let result = await person.save();
-      alert('New object created with objectId: ' + result.id);
-    } catch (error) {
-      alert('Failed to create new object, with error code: ' + error.message);
-    }
-  }async function retrievePerson(name) {
-  const query = new Parse.Query("Person");
-  query.equalTo("name", name);
-
-  try {
-    const person = await query.first();
-    const name = person.get("name");
-    const age = person.get("age");
-
-    alert(`Name: ${name} age: ${age}`);
-  } catch (error) {
-    alert(`Failed to retrieve the object, with error code: ${error.message}`);
-  }
-}
-
-
-</script>
-
-
-  <title>Home — The Last Epiphany</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/product/">
-
-  <link rel="icon" type="image/png" href="images/jujusamaaa.png" sizes="192x192">
-
+  <meta name="description" content="The Last Epiphany — a epifania de Larissa Ember. Crônicas, artigos, projetos e programação.">
+  <meta property="og:title" content="The Last Epiphany"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:description" content="A epifania de uma moça chamada Larissa."/>
+  <meta property="og:image" content="./images/jujusamaaa.png"/>
+  <meta property="twitter:title" content="The Last Epiphany"/>
+  <meta property="twitter:description" content="A epifania de uma moça chamada Larissa."/>
+  <meta name="twitter:image" content="./images/jujusamaaa.png"/>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+  <title>Home — The Last Epiphany</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+    :root {
+      --bg: #0f0f13;
+      --surface: #18181f;
+      --surface2: #22222c;
+      --border: rgba(255,255,255,0.07);
+      --accent: #5ecfb1;
+      --accent-dim: rgba(94, 207, 177, 0.12);
+      --accent-glow: rgba(94, 207, 177, 0.25);
+      --text: #e4e0db;
+      --text-muted: #6e6e80;
+      --text-dim: #a8a8b8;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --radius: 12px;
+      --tr: 0.22s cubic-bezier(0.4,0,0.2,1);
     }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    .b-example-divider {
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
-
-    .b-example-vr {
-      flex-shrink: 0;
-      width: 1.5rem;
-      height: 100vh;
-    }
-
-    .bi {
-      vertical-align: -.125em;
-      fill: currentColor;
-    }
-
-    .nav-scroller {
-      position: relative;
-      z-index: 2;
-      height: 2.75rem;
-      overflow-y: hidden;
-    }
-
-    .nav-scroller .nav {
-      display: flex;
-      flex-wrap: nowrap;
-      padding-bottom: 1rem;
-      margin-top: -1px;
-      overflow-x: auto;
-      text-align: center;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .container {
-      max-width: 960px;
-    }
-
-    /*
- * Custom translucent site header
- */
-
-    .site-header {
-      background-color: rgba(0, 0, 0, .85);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-
-    .site-header a {
-      color: #8e8e8e;
-      transition: color .15s ease-in-out;
-    }
-
-    .site-header a:hover {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    /*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-    .product-device {
-      position: absolute;
-      right: 10%;
-      bottom: -30%;
-      width: 300px;
-      height: 540px;
-      background-color: #333;
-      border-radius: 21px;
-      transform: rotate(30deg);
-    }
-
-    .product-device::before {
-      position: absolute;
-      top: 10%;
-      right: 10px;
-      bottom: 10%;
-      left: 10px;
-      content: "";
-      background-color: rgba(255, 255, 255, .1);
-      border-radius: 5px;
-    }
-
-    .product-device-2 {
-      top: -25%;
-      right: auto;
-      bottom: 0;
-      left: 5%;
-      background-color: #e5e5e5;
-    }
-
-
-    /*
- * Extra utilities
- */
-
-    .flex-equal>* {
-      flex: 1;
-    }
-
-    @media (min-width: 768px) {
-      .flex-md-equal>* {
-        flex: 1;
-      }
-    }
-
-    .olar {
-      background: linear-gradient(to right,
-          rgb(51, 51, 51) 0%,
-          rgb(108, 224, 195) 90%,
-          paleturquoise 100%);
-    }
-
-    main {
-      background-color: rgb(51, 51, 51);
-      padding: 20px;
-      border-radius: 10px;
-
-      min-width: 280px;
-      margin: auto;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: rgb(51, 51, 51);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .text-white h1 {
-      font-family: Calibri;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: rgb(240, 240, 240);
-      font-size: 60px;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,15,19,0.88);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-nav {
+      max-width: 960px; margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo svg { color: var(--accent); transition: transform var(--tr); display: block; }
+    .nav-logo:hover svg { transform: rotate(30deg); }
+    .nav-links { display: flex; margin-left: auto; }
+    .nav-links a {
+      color: var(--text-muted); font-size: 0.875rem; font-weight: 500;
+      letter-spacing: 0.02em; padding: 0.5rem 1rem;
+      position: relative; transition: color var(--tr);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: 2px; left: 1rem; right: 1rem; height: 1px;
+      background: var(--accent);
+      transform: scaleX(0); transition: transform var(--tr); transform-origin: left;
+    }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* ── PAGE ── */
+    .page-wrapper {
+      max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem;
+      animation: fadeUp 0.5s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(16px); }
+      to   { opacity:1; transform:translateY(0); }
     }
 
-    .img-fluid {
-      height: 465px;
-      position: absolute;
-      bottom: 0%;
-      left: 65%;
+    /* ── HERO ── */
+    .hero {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #1a1a24 0%, #1e2e28 50%, #162820 100%);
+      border: 1px solid var(--border);
+      padding: 3.5rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; min-height: 320px;
+      margin-bottom: 2.5rem;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(94,207,177,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-text { position: relative; z-index: 1; max-width: 440px; }
+    .hero-eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-dim);
+      border: 1px solid rgba(94,207,177,0.2);
+      padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1; color: #fff; margin-bottom: 1rem;
+    }
+    .hero p {
+      color: var(--text-dim); font-size: 1.05rem;
+      line-height: 1.6; margin-bottom: 1.75rem;
+    }
+    .hero-image {
+      position: relative; z-index: 1; flex-shrink: 0;
+    }
+    .hero-image img {
+      width: 220px; height: 220px; object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid rgba(94,207,177,0.3);
+      box-shadow: 0 0 40px rgba(94,207,177,0.15);
+    }
+    @media (max-width: 640px) { .hero-image { display: none; } .hero { padding: 2rem 1.5rem; } }
+
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: #0f0f13;
+      font-weight: 600; font-size: 0.875rem; padding: 0.625rem 1.5rem;
+      border-radius: var(--radius); transition: all var(--tr);
+    }
+    .btn-primary:hover {
+      background: #7adfc8; text-decoration: none;
+      transform: translateY(-2px); box-shadow: 0 6px 20px var(--accent-glow);
+    }
+    .btn-outline {
+      display: inline-block; background: transparent; color: var(--accent);
+      font-weight: 500; font-size: 0.875rem; padding: 0.625rem 1.5rem;
+      border-radius: var(--radius); border: 1px solid rgba(94,207,177,0.35);
+      transition: all var(--tr); margin-left: 0.75rem;
+    }
+    .btn-outline:hover { background: var(--accent-dim); text-decoration: none; }
+
+    /* ── SECTION GRID ── */
+    .section-title {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
     }
 
-    .img1 {
-      align-content: center;
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
     }
 
-    .text h1 {
-      text-align: left;
-      font-size: 60px;
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.75rem;
+      transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+      display: flex; flex-direction: column;
     }
-
-    .text p {
-      text-align: left;
-      font-size: 30px;
-      min-width: 200px;
-      max-width: 1000px;
+    .card:hover {
+      border-color: rgba(94,207,177,0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     }
-
-    .text h3 {
-      text-align: left;
-      font-size: 30px;
+    .card-tag {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.75rem;
     }
-
-    .display-1 {
-      font-weight: bold;
-      border-bottom: 2px solid;
+    .card h3 { font-family: var(--font-display); font-size: 1.25rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.25; }
+    .card p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; flex: 1; }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--accent); font-size: 0.85rem; font-weight: 500;
+      margin-top: 1.25rem; transition: gap var(--tr);
     }
+    .card-link:hover { gap: 0.65rem; text-decoration: none; }
 
-    div.bg0 {
-      background: linear-gradient(to top,
-          rgb(51, 51, 51) 0%,
-          rgba(108, 224, 195, 0.56) 90%,
-          rgba(175, 238, 238, 0.56) 100%)
+    .card-visual {
+      background: linear-gradient(135deg, var(--surface2), var(--surface));
+      border-radius: var(--radius); height: 140px; margin-bottom: 1.25rem;
+      overflow: hidden; position: relative;
     }
-
-    .bt1 {
-      margin-top: 25%;
-      font-size: 24px;
-    }
-
-    .flex-gap {
-      gap: 1rem;
-    }
-
-    .cronicas {
+    .card-visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .card-visual.newspapers {
       background-image: url('images/jornais.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-size: cover; background-position: center;
     }
+
+    /* ── ABOUT SECTION ── */
+    .about-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .about-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2rem;
+      grid-column: span 2;
+    }
+    .about-card h2 {
+      font-family: var(--font-display); font-size: 2rem;
+      color: #fff; margin-bottom: 0.75rem;
+    }
+    .about-card p { color: var(--text-dim); max-width: 600px; }
+    @media (max-width: 640px) { .about-row { grid-template-columns: 1fr; } .about-card { grid-column: span 1; } }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem; max-width: 960px; margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 2rem;
+    }
+    .footer-brand small { color: var(--text-muted); font-size: 0.8rem; display: block; margin-top: 0.5rem; }
+    .site-footer h5 {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;
+    }
+    .site-footer ul { list-style: none; }
+    .site-footer li { margin-bottom: 0.4rem; }
+    .site-footer a { color: var(--text-dim); font-size: 0.85rem; transition: color var(--tr); }
+    .site-footer a:hover { color: var(--accent); text-decoration: none; }
+    .footer-logo svg { color: var(--accent); }
   </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="./css/product.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <header class="site-header sticky-top py-1">
-    <nav class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2" href="index.html" aria-label="Product">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
-          viewBox="0 0 24 24">
-          <title>Product</title>
-          <circle cx="12" cy="12" r="10" />
-          <path
-            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="nav-logo" href="index.html" aria-label="The Last Epiphany">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
         </svg>
       </a>
-      <a class="py-2 d-none d-md-inline-block " href="index.html">home</a>
-      <a class="py-2 d-none d-md-inline-block" href="artigos.html">Artigos</a>
-      <a class="py-2 d-none d-md-inline-block" href="comicas.html">Crônicas</a>
-      <a class="py-2 d-none d-md-inline-block" href="profile.html">Contato</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">home</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="comicas.html">Crônicas</a>
+        <a href="profile.html">Contato</a>
+      </nav>
     </nav>
   </header>
 
-  <main>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center olar">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="text-white text">The Last Epiphany</h1>
-        <p class="lead fw-normal text-white">Não importa seu simbolo,
-          se faz sentido para quem criou,
-          faz sentido para todes!</p>
-        <a class="btn btn-outline-light" href="#about">Saiba mais</a>
+  <div class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <span class="hero-eyebrow">blog pessoal</span>
+        <h1>The Last<br><em>Epiphany</em></h1>
+        <p>Não importa seu símbolo — se faz sentido para quem criou, faz sentido para todes.</p>
+        <a class="btn-primary" href="comicas.html">Ver Crônicas</a>
+        <a class="btn-outline" href="profile.html">Sobre mim</a>
       </div>
-      <img src="images/jujusamaaa.png" class="img-fluid d-none d-md-block d-lg-block d-xl-block">
-    </div>
+      <div class="hero-image">
+        <img src="images/jujusamaaa.png" alt="Larissa Ember">
+      </div>
+    </section>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5  text-white overflow-hidden">
-        <div class="my-3 py-3 align-content-center">
-          <div class="my-3 py-3 align-content-center text-center" id="about">
-            <a href="page2.html">
-              <img class="img1" src="images/img-hacking.png"
-                alt="Aqui temos a foto de dois gatinhos dormindo abraçados, eles são brancos, filhotes e alegram o seu dia!"></a>
-          </div>
-          <h2 class="text-lg-left font-weight-bold display-1">Sobre</h2>
-          <h3 class="text">Gatinios são fofis né?? Apaixonada por eles!
-          </h3>
-          <p class="lead">A Larissa ama coisas fofas além de: Aprender, desenvolver, ler, escrever, viajar, ouvir musica
-            e jogar... Receba suas boas vindas!</p>
-          <p class="lead">Aqui você encontrara a epifania de Larissa, com artigos sobre programação e desenvovimento
-            web, cronicas e projetos que ela pense serem interessantes (hehe). Arrasta pra cima e vêm comigo quem
-            aguenta.
-
-
-          </p>
-        </div>
+    <!-- SOBRE -->
+    <p class="section-title">sobre o site</p>
+    <div class="about-row">
+      <div class="about-card">
+        <h2>Olá, eu sou a Larissa 👋</h2>
+        <p>Apaixonada por gatinhos, código, literatura e viagens. Aqui você encontra crônicas da minha vida, artigos sobre programação e web, além de projetos que acho interessantes. Arrasta pra cima e vem comigo quem aguenta.</p>
       </div>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
-      <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Artigos</h2>
-          <p class="lead">Nada para ver aqui... Volte em 24 dias, quem sabe aparece??</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <a class="btn btn-secondary bt1" href="artigos.html">Acesse</a>
-        </div>
+    <!-- SEÇÕES PRINCIPAIS -->
+    <p class="section-title">o que tem por aqui</p>
+    <div class="cards-grid">
+
+      <div class="card">
+        <div class="card-visual newspapers"></div>
+        <span class="card-tag">Crônicas</span>
+        <h3>A caixa de pandora de uma linda Fadinha</h3>
+        <p>Reinterpretações de acontecimentos reais misturados com as ideias da minha cabeça.</p>
+        <a href="comicas.html" class="card-link">Ler crônicas →</a>
       </div>
-      <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">Crônicas</h2>
-          <p class="lead">A caixa de pandora, de uma linda Fadinha.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto cronicas"
-          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <a class="btn btn-secondary bt1" href="comicas.html">Acesse</a>
-        </div>
+
+      <div class="card">
+        <span class="card-tag">Artigos</span>
+        <h3>Programação & desenvolvimento web</h3>
+        <p>Textos sobre as tecnologias que estudo, os erros que cometo e o que aprendo com eles.</p>
+        <a href="artigos.html" class="card-link">Ver artigos →</a>
       </div>
+
+      <div class="card">
+        <span class="card-tag">Projeto</span>
+        <h3>Pokédex Interativa</h3>
+        <p>Um dos meus projetos favoritos — clique e veja a magia acontecer.</p>
+        <a href="projetos/pokedex.html" class="card-link">Abrir Pokédex →</a>
+      </div>
+
+      <div class="card">
+        <span class="card-tag">Perfil</span>
+        <h3>Quem é a Larissa?</h3>
+        <p>Técnica em logística, programadora, estudante de direito e transfemucha. Bora se conectar.</p>
+        <a href="profile.html" class="card-link">Ver perfil →</a>
+      </div>
+
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
-      <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Pokedex</h2>
-          <p class="lead">Clique na pokedex e veja a magia acontecer...</p>
-        </div>
-        <a href="projetos/pokedex.html">
-          <img src="projetos/images/pokedex.png" alt="imagem de uma Pokedex" style="max-height: 33%;
-        min-width: 20%;" class="img"></a>
+  </div><!-- /.page-wrapper -->
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+        <small>© Larissa Ember 2022</small>
       </div>
-      <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white align-content-center">
-        <div class="my-3 py-3">
-          <h2 class="display-5">Quem é Larissa?</h2>
-          <p class="lead">A Lady Lari mi consagras, esta ouvindo o mano Lil Nax X.</p>
-          <a class="btn btn-outline-light" href="profile.html">Perfil Social</a>
-        </div>
-        <div class="shadow-sm mx-auto"
-          style="width: 101%; height: 300px; border-radius: 21px 21px 0 0; align-content: center;">
-          <a href="https://www.pinterest.cl/pin/579768152016330995/?amp_client_id=CLIENT_ID%28_%29&mweb_unauth_id=%7B%7Bdefault.session%7D%7D&simplified=true"
-            target="external"><img src="images/fofri.gif"
-              alt="Gif da Larissa com frio, assoprando as mãos (clique no link para seguir até o autor do gif...)"></a>
-        </div>
-
-      </div>
-
-
-    </div>
-  </main>
-
-  <footer class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md">
-        <br>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-        <small class="d-block mb-3 text-light">&copy;Larissa Ember 2022</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5 class="">Neste Site</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="artigos.html">Artigos</a></li>
-          <li><a class="link-secondary" href="comicas.html">Crônicas</a></li>
-          <li><a class="link-secondary" href="projetos/pokedex.html">Pokedex</a></li>
-          <li><a class="link-secondary" href="#">Galeria de Projetos</a></li>
-          <li><a class="link-secondary" href="#">Portifolio</a></li>
+      <div>
+        <h5>Neste Site</h5>
+        <ul>
+          <li><a href="artigos.html">Artigos</a></li>
+          <li><a href="comicas.html">Crônicas</a></li>
+          <li><a href="projetos/pokedex.html">Pokédex</a></li>
+          <li><a href="#">Portfólio</a></li>
         </ul>
       </div>
-      <div class="col-6 col-md">
-        <h5>Midias</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="https://discord.gg/jWzjDQSE">Servidor no Discord</a></li>
-          <li><a class="link-secondary" href="profile.html">Contato comercial</a></li>
+      <div>
+        <h5>Mídias</h5>
+        <ul>
+          <li><a href="https://discord.gg/jWzjDQSE">Discord</a></li>
+          <li><a href="profile.html">Contato</a></li>
         </ul>
       </div>
-      <div class="col-6 col-md">
+      <div>
         <h5>Recursos</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">Parcerias</a></li>
-          <li><a class="link-secondary" href="#">Treinamento</a></li>
-          <li><a class="link-secondary" href="#">Referências</a></li>
+        <ul>
+          <li><a href="#">Parcerias</a></li>
+          <li><a href="#">Referências</a></li>
         </ul>
       </div>
-      <div class="col-6 col-md">
-        <h5>Sobre Institucional</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="profile">A Larissa</a></li>
-          <li><a class="link-secondary" href="#">Direitos Autorais</a></li>
-          <li><a class="link-secondary" href="#">Privacidade</a></li>
-          <li><a class="link-secondary" href="#">Termos de uso</a></li>
+      <div>
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="profile.html">A Larissa</a></li>
+          <li><a href="#">Direitos Autorais</a></li>
+          <li><a href="#">Privacidade</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </body>
-
 </html>
