@@ -402,6 +402,16 @@
     let todosArtigos = [];
     let filtroAtual = { tipo: null, valor: null };
 
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     function formatarData(data) {
       if (!data) return '';
       const d = new Date(data);
@@ -427,12 +437,12 @@
       }
 
       const cards = artigos.map(artigo => {
-        const id = artigo.id;
-        const titulo = artigo.get('titulo') || 'Sem título';
-        const subtitulo = artigo.get('subtitulo') || '';
-        const categoria = artigo.get('categoria') || '';
+        const id = escapeHtml(artigo.id);
+        const titulo = escapeHtml(artigo.get('titulo') || 'Sem título');
+        const subtitulo = escapeHtml(truncar(artigo.get('subtitulo') || '', 120));
+        const categoria = escapeHtml(artigo.get('categoria') || '');
         const data = artigo.get('data') || artigo.createdAt;
-        const imagem = artigo.get('imagem') || '';
+        const imagem = escapeHtml(artigo.get('imagem') || '');
         const tags = artigo.get('tags') || [];
 
         const imagemHtml = imagem
@@ -444,7 +454,7 @@
           : '';
 
         const tagsHtml = tags.length
-          ? tags.map(t => `<span class="tag-item" onclick="filtrarPorTag('${t}')">${t}</span>`).join('')
+          ? tags.map(t => `<span class="tag-item" onclick="filtrarPorTag('${escapeHtml(t)}')">${escapeHtml(t)}</span>`).join('')
           : '';
 
         return `
@@ -456,9 +466,9 @@
                 <h5 class="card-title">
                   <a href="artigo.html?id=${id}">${titulo}</a>
                 </h5>
-                <p class="card-text flex-grow-1">${truncar(subtitulo, 120)}</p>
+                <p class="card-text flex-grow-1">${subtitulo}</p>
                 <div class="d-flex justify-content-between align-items-center mt-2">
-                  <span class="data-texto">${formatarData(data)}</span>
+                  <span class="data-texto">${escapeHtml(formatarData(data))}</span>
                   <a href="artigo.html?id=${id}" class="read-more">Ler mais →</a>
                 </div>
                 ${tagsHtml ? `<div class="mt-2">${tagsHtml}</div>` : ''}
@@ -485,8 +495,8 @@
         catLista.innerHTML = Object.entries(categoriasMap)
           .sort((a, b) => b[1] - a[1])
           .map(([cat, count]) =>
-            `<a class="categoria-item d-flex" onclick="filtrarPorCategoria('${cat}')" href="#">
-              <span>${cat}</span><span class="categoria-count">${count}</span>
+            `<a class="categoria-item d-flex" onclick="filtrarPorCategoria('${escapeHtml(cat)}')" href="#">
+              <span>${escapeHtml(cat)}</span><span class="categoria-count">${count}</span>
             </a>`)
           .join('');
       }
@@ -503,7 +513,7 @@
         tagsLista.innerHTML = '<p class="text-muted" style="font-size:0.85rem;">Nenhuma tag ainda.</p>';
       } else {
         tagsLista.innerHTML = Object.keys(tagsSet)
-          .map(t => `<a class="tag-item" onclick="filtrarPorTag('${t}')" href="#">${t}</a>`)
+          .map(t => `<a class="tag-item" onclick="filtrarPorTag('${escapeHtml(t)}')" href="#">${escapeHtml(t)}</a>`)
           .join('');
       }
     }

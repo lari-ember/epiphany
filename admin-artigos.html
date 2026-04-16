@@ -224,14 +224,19 @@
           <div class="card-admin card">
             <div class="card-header">🔐 Acesso Administrativo</div>
             <div class="card-body p-4">
-              <p class="text-muted mb-3" style="font-size:0.85rem;">Digite a senha para acessar o painel de artigos.</p>
+              <p class="text-muted mb-3" style="font-size:0.85rem;">Entre com sua conta Back4App para acessar o painel de artigos.</p>
+              <div class="mb-3">
+                <label for="usuario-input" class="form-label">Usuário</label>
+                <input type="text" class="form-control" id="usuario-input" placeholder="seu usuário"
+                  onkeydown="if(event.key==='Enter') entrar()">
+              </div>
               <div class="mb-3">
                 <label for="senha-input" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="senha-input" placeholder="••••••••"
                   onkeydown="if(event.key==='Enter') entrar()">
               </div>
-              <button class="btn btn-primary-custom w-100" onclick="entrar()">Entrar</button>
-              <div id="login-erro" class="mt-2 text-danger" style="font-size:0.85rem; display:none;">Senha incorreta.</div>
+              <button class="btn btn-primary-custom w-100" id="btn-login" onclick="entrar()">Entrar</button>
+              <div id="login-erro" class="mt-2 text-danger" style="font-size:0.85rem; display:none;"></div>
             </div>
           </div>
         </div>
@@ -358,7 +363,15 @@
     Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc", "PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd");
     Parse.serverURL = "https://parseapi.back4app.com/";
 
-    const SENHA_ADMIN = "epiphany2024";
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
 
     function mostrarToast(msg, tipo) {
       const el = document.getElementById('toast-msg');
@@ -369,26 +382,48 @@
       t.show();
     }
 
-    function entrar() {
+    async function entrar() {
+      const usuario = document.getElementById('usuario-input').value.trim();
       const senha = document.getElementById('senha-input').value;
-      const erro = document.getElementById('login-erro');
-      if (senha === SENHA_ADMIN) {
-        sessionStorage.setItem('admin_auth', '1');
-        document.getElementById('login-section').style.display = 'none';
-        document.getElementById('admin-section').style.display = 'block';
-        carregarListaArtigos();
-        definirDataHoje();
-      } else {
-        erro.style.display = 'block';
+      const erroEl = document.getElementById('login-erro');
+      const btn = document.getElementById('btn-login');
+
+      if (!usuario || !senha) {
+        erroEl.textContent = 'Preencha usuário e senha.';
+        erroEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Entrando...';
+      erroEl.style.display = 'none';
+
+      try {
+        await Parse.User.logIn(usuario, senha);
+        mostrarPainel();
+      } catch (error) {
+        erroEl.textContent = 'Usuário ou senha incorretos.';
+        erroEl.style.display = 'block';
         document.getElementById('senha-input').value = '';
         document.getElementById('senha-input').focus();
       }
+
+      btn.disabled = false;
+      btn.textContent = 'Entrar';
     }
 
-    function sair() {
-      sessionStorage.removeItem('admin_auth');
+    function mostrarPainel() {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('admin-section').style.display = 'block';
+      carregarListaArtigos();
+      definirDataHoje();
+    }
+
+    async function sair() {
+      await Parse.User.logOut();
       document.getElementById('admin-section').style.display = 'none';
       document.getElementById('login-section').style.display = 'block';
+      document.getElementById('usuario-input').value = '';
       document.getElementById('senha-input').value = '';
     }
 
@@ -513,8 +548,8 @@
         }
 
         lista.innerHTML = artigos.map(a => {
-          const titulo = a.get('titulo') || 'Sem título';
-          const cat = a.get('categoria') || '';
+          const titulo = escapeHtml(a.get('titulo') || 'Sem título');
+          const cat = escapeHtml(a.get('categoria') || '');
           const pub = a.get('publicado');
           const data = a.get('data') || a.createdAt;
           const dataStr = new Date(data).toLocaleDateString('pt-BR');
@@ -530,9 +565,9 @@
                 </div>
               </div>
               <div class="d-flex flex-column gap-1 flex-shrink-0">
-                <button class="btn btn-sm btn-outline-light" style="font-size:0.75rem;" onclick="editarArtigo('${a.id}')">Editar</button>
-                <a href="artigo.html?id=${a.id}" target="_blank" class="btn btn-sm btn-outline-secondary" style="font-size:0.75rem;">Ver</a>
-                <button class="btn btn-sm btn-outline-danger" style="font-size:0.75rem;" onclick="excluirArtigo('${a.id}', '${titulo.replace(/'/g, "\\'")}')">Excluir</button>
+                <button class="btn btn-sm btn-outline-light" style="font-size:0.75rem;" onclick="editarArtigo('${escapeHtml(a.id)}')">Editar</button>
+                <a href="artigo.html?id=${escapeHtml(a.id)}" target="_blank" class="btn btn-sm btn-outline-secondary" style="font-size:0.75rem;">Ver</a>
+                <button class="btn btn-sm btn-outline-danger" style="font-size:0.75rem;" onclick="excluirArtigo('${escapeHtml(a.id)}')">Excluir</button>
               </div>
             </div>`;
         }).join('');
@@ -573,8 +608,9 @@
       }
     }
 
-    async function excluirArtigo(id, titulo) {
-      if (!confirm(`Tem certeza que deseja excluir o artigo "${titulo}"? Esta ação não pode ser desfeita.`)) return;
+    async function excluirArtigo(id) {
+      const titulo = document.querySelector(`[onclick="editarArtigo('${id}')"]`)?.closest('.artigo-lista-item')?.querySelector('.info-titulo')?.textContent || 'este artigo';
+      if (!confirm(`Tem certeza que deseja excluir "${titulo}"? Esta ação não pode ser desfeita.`)) return;
 
       try {
         const Artigo = Parse.Object.extend('Artigo');
@@ -588,12 +624,9 @@
       }
     }
 
-    // Verificar se já está autenticado na sessão
-    if (sessionStorage.getItem('admin_auth') === '1') {
-      document.getElementById('login-section').style.display = 'none';
-      document.getElementById('admin-section').style.display = 'block';
-      carregarListaArtigos();
-      definirDataHoje();
+    // Verificar se já está autenticado via Parse session
+    if (Parse.User.current()) {
+      mostrarPainel();
     }
   </script>
 
