@@ -107,10 +107,6 @@ body {
   color: beige;
 }
 
-div {
-  background-color: rgb(37, 37, 37);
-}
-
 main {
   background-color: rgb(51, 51, 51);
   padding: 20px;
@@ -258,6 +254,19 @@ h3.pb-3 {
   width: 200px;
   height: 295px;
   background-size: 260%;
+}
+
+.hero-banner {
+  min-height: 280px;
+  gap: 1.5rem;
+}
+
+.hero-banner .hero-text {
+  z-index: 1;
+}
+
+.hero-banner .hero-image {
+  z-index: 1;
 }
 
 li {
