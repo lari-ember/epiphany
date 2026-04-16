@@ -270,6 +270,10 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
       font-size: 24px;
     }
 
+    .flex-gap {
+      gap: 1rem;
+    }
+
     .cronicas {
       background-image: url('images/jornais.jpg');
       background-repeat: no-repeat;
@@ -283,8 +287,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
 </head>
 
 <body>
-    <button onclick="saveNewPerson()">Save new person</button>
-    <button onclick="retrievePerson("row bow")">Retrieve person</button>
 
   <header class="site-header sticky-top py-1">
     <nav class="container d-flex flex-column flex-md-row justify-content-between">
@@ -317,7 +319,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
       <img src="images/jujusamaaa.png" class="img-fluid d-none d-md-block d-lg-block d-xl-block">
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
       <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5  text-white overflow-hidden">
         <div class="my-3 py-3 align-content-center">
           <div class="my-3 py-3 align-content-center text-center" id="about">
@@ -340,7 +342,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
       </div>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
       <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
         <div class="my-3 p-3">
           <h2 class="display-5">Artigos</h2>
@@ -362,7 +364,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/'
       </div>
     </div>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 flex-gap">
       <div class="bg0 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
         <div class="my-3 p-3">
           <h2 class="display-5">Pokedex</h2>
