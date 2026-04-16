@@ -136,13 +136,106 @@ main {
 
 p {
   font-family: Calibri;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
   color: rgb(240, 240, 240);
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   min-width: 200px;
   max-width: 1000px;
 }
+
+/* ── Leitura de crônicas ─────────────────────────────────── */
+.blog-main {
+  max-width: 720px;
+}
+
+.blog-post p {
+  font-size: 18px;
+  line-height: 1.85;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 1.4rem;
+  max-width: 68ch;
+}
+
+.blog-post-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.75rem;
+  color: #aaa;
+}
+
+.blog-post h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid rgb(108, 224, 195);
+  padding-left: 0.75rem;
+  color: rgb(200, 240, 230);
+}
+
+.blog-post hr {
+  border-color: rgba(108, 224, 195, 0.3);
+  margin: 2rem 0;
+}
+
+.blog-post ul li {
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}
+
+.blog-post ul li div {
+  background-color: transparent;
+}
+
+/* Citações / monólogos internos em itálico */
+.blog-post p:has(> em),
+.blog-post p[data-quote] {
+  font-style: italic;
+  border-left: 3px solid rgba(108, 224, 195, 0.5);
+  padding-left: 1rem;
+  color: rgb(210, 235, 225);
+}
+
+/* Header do blog dentro das crônicas */
+h3.pb-3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+/* Sidebar */
+.blog-sidebar .p-3 h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: rgb(175, 230, 210);
+  margin-bottom: 0.75rem;
+}
+
+.blog-sidebar .p-3 a {
+  color: rgb(175, 230, 210);
+  text-decoration: none;
+}
+
+.blog-sidebar .p-3 a:hover {
+  text-decoration: underline;
+  color: rgb(108, 224, 195);
+}
+/* ─────────────────────────────────────────────────────────── */
 
 .site-header a {
   color: #8e8e8e;
