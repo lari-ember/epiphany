@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta property="og:title" content="Artigo — The Last Epiphany" />
+  <meta property="og:image" content="./images/jujusamaaa.png" />
+  <meta name="author" content="Larissa Ember">
+
+  <title>Artigo — The Last Epiphany</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/jujusamaaa.png" sizes="192x192">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link href="./css/product.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgb(51, 51, 51);
+      color: #f0f0f0;
+    }
+
+    main {
+      background-color: rgb(51, 51, 51);
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 280px;
+      margin: auto;
+    }
+
+    .artigo-hero {
+      background: linear-gradient(to right,
+          rgb(51, 51, 51) 0%,
+          rgb(108, 224, 195) 90%,
+          paleturquoise 100%);
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .artigo-hero .categoria-badge {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .artigo-hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .artigo-hero .subtitulo {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .artigo-hero .meta {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .artigo-conteudo {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .artigo-conteudo h2,
+    .artigo-conteudo h3,
+    .artigo-conteudo h4 {
+      color: rgb(108, 224, 195);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .artigo-conteudo a {
+      color: rgb(108, 224, 195);
+    }
+
+    .artigo-conteudo a:hover {
+      color: paleturquoise;
+    }
+
+    .artigo-conteudo code {
+      background-color: #1a1a1a;
+      color: rgb(108, 224, 195);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .artigo-conteudo pre {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      color: #ddd;
+    }
+
+    .artigo-conteudo pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+
+    .artigo-conteudo blockquote {
+      border-left: 4px solid rgb(108, 224, 195);
+      padding-left: 1rem;
+      color: #aaa;
+      font-style: italic;
+      margin-left: 0;
+    }
+
+    .artigo-conteudo img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .artigo-imagem-topo {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .tag-item {
+      background-color: #3a3a3a;
+      color: #aaa;
+      border-radius: 4px;
+      padding: 3px 9px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin: 3px 2px;
+      text-decoration: none;
+    }
+
+    .tag-item:hover {
+      background-color: rgba(108, 224, 195, 0.15);
+      color: rgb(108, 224, 195);
+    }
+
+    .sidebar-widget {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-widget h5 {
+      color: rgb(108, 224, 195);
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .related-card {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #3a3a3a;
+      text-decoration: none;
+      color: #ddd;
+    }
+
+    .related-card:last-child {
+      border-bottom: none;
+    }
+
+    .related-card:hover {
+      color: rgb(108, 224, 195);
+    }
+
+    .related-card .related-thumb {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .related-card .related-thumb-placeholder {
+      width: 60px;
+      height: 60px;
+      background-color: #3a3a3a;
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .related-card .related-info small {
+      color: #777;
+      font-size: 0.75rem;
+    }
+
+    .loading-msg {
+      text-align: center;
+      color: #aaa;
+      padding: 3rem 0;
+    }
+
+    .loading-spinner {
+      border: 3px solid #444;
+      border-top: 3px solid rgb(108, 224, 195);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .voltar-link {
+      color: rgb(108, 224, 195);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .voltar-link:hover {
+      color: paleturquoise;
+      text-decoration: underline;
+    }
+
+    footer { color: #aaa; }
+    footer h5 { color: #f0f0f0; }
+
+    #artigo-section { display: none; }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="index.html" aria-label="Product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="index.html">home</a>
+      <a class="py-2 d-none d-md-inline-block" href="artigos.html">Artigos</a>
+      <a class="py-2 d-none d-md-inline-block" href="comicas.html">Crônicas</a>
+      <a class="py-2 d-none d-md-inline-block" href="profile.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div id="loading-section" class="loading-msg">
+      <div class="loading-spinner"></div>
+      <p>Carregando artigo...</p>
+    </div>
+
+    <div id="erro-section" style="display:none; text-align:center; padding:3rem 0;">
+      <p style="font-size:3rem;">😕</p>
+      <h3>Artigo não encontrado</h3>
+      <p class="text-muted">Talvez ele tenha sido removido ou o link esteja errado.</p>
+      <a href="artigos.html" class="btn btn-outline-light">← Voltar para Artigos</a>
+    </div>
+
+    <div id="artigo-section">
+      <div class="row">
+
+        <!-- Artigo principal -->
+        <div class="col-md-8">
+          <div class="mb-3">
+            <a href="artigos.html" class="voltar-link">← Voltar para Artigos</a>
+          </div>
+
+          <div class="artigo-hero" id="artigo-hero">
+            <span class="categoria-badge" id="artigo-categoria"></span>
+            <h1 id="artigo-titulo"></h1>
+            <p class="subtitulo" id="artigo-subtitulo"></p>
+            <div class="meta">
+              <span id="artigo-autor"></span> · <span id="artigo-data"></span>
+            </div>
+          </div>
+
+          <img id="artigo-imagem" class="artigo-imagem-topo" style="display:none;" alt="">
+
+          <div class="artigo-conteudo" id="artigo-conteudo"></div>
+
+          <div class="mt-4" id="artigo-tags-container" style="display:none;">
+            <strong style="color:#aaa;">Tags:</strong>
+            <div id="artigo-tags" class="mt-2"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 mt-4 mt-md-0">
+
+          <div class="sidebar-widget" id="relacionados-widget" style="display:none;">
+            <h5>Artigos Relacionados</h5>
+            <div id="relacionados-lista"></div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h5>Mais Artigos</h5>
+            <div id="mais-artigos-lista">
+              <p class="text-muted" style="font-size:0.85rem;">Carregando...</p>
+            </div>
+            <a href="artigos.html" class="btn btn-outline-light btn-sm mt-2">Ver todos</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+        <small class="d-block mb-3 text-light">&copy;Larissa Ember 2022</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Neste Site</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="artigos.html">Artigos</a></li>
+          <li><a class="link-secondary" href="comicas.html">Crônicas</a></li>
+          <li><a class="link-secondary" href="projetos/pokedex.html">Pokedex</a></li>
+          <li><a class="link-secondary" href="#">Galeria de Projetos</a></li>
+          <li><a class="link-secondary" href="#">Portifolio</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Midias</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="https://discord.gg/jWzjDQSE">Servidor no Discord</a></li>
+          <li><a class="link-secondary" href="profile.html">Contato comercial</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Recursos</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Parcerias</a></li>
+          <li><a class="link-secondary" href="#">Treinamento</a></li>
+          <li><a class="link-secondary" href="#">Referências</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Sobre Institucional</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="profile.html">A Larissa</a></li>
+          <li><a class="link-secondary" href="#">Direitos Autorais</a></li>
+          <li><a class="link-secondary" href="#">Privacidade</a></li>
+          <li><a class="link-secondary" href="#">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="https://cdn.back4app.com/libs/parse/2.8.4/parse.min.js"></script>
+  <script>
+    Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc", "PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd");
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    function formatarData(data) {
+      if (!data) return '';
+      const d = new Date(data);
+      return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function getIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    async function carregarArtigo() {
+      const id = getIdFromUrl();
+      if (!id) {
+        mostrarErro();
+        return;
+      }
+
+      try {
+        const Artigo = Parse.Object.extend('Artigo');
+        const query = new Parse.Query(Artigo);
+        const artigo = await query.get(id);
+
+        if (!artigo) {
+          mostrarErro();
+          return;
+        }
+
+        renderizarArtigo(artigo);
+        await carregarRelacionados(artigo);
+        await carregarMaisArtigos(id);
+
+      } catch (error) {
+        mostrarErro();
+      }
+    }
+
+    function renderizarArtigo(artigo) {
+      const titulo = artigo.get('titulo') || 'Sem título';
+      const subtitulo = artigo.get('subtitulo') || '';
+      const categoria = artigo.get('categoria') || '';
+      const conteudo = artigo.get('conteudo') || '';
+      const data = artigo.get('data') || artigo.createdAt;
+      const imagem = artigo.get('imagem') || '';
+      const tags = artigo.get('tags') || [];
+      const autor = artigo.get('autor') || 'Larissa Ember';
+
+      document.title = `${titulo} — The Last Epiphany`;
+      document.querySelector('meta[name="description"]').setAttribute('content', subtitulo);
+
+      document.getElementById('artigo-titulo').textContent = titulo;
+      document.getElementById('artigo-subtitulo').textContent = subtitulo;
+      document.getElementById('artigo-data').textContent = formatarData(data);
+      document.getElementById('artigo-autor').textContent = autor;
+
+      if (categoria) {
+        document.getElementById('artigo-categoria').textContent = categoria;
+      } else {
+        document.getElementById('artigo-categoria').style.display = 'none';
+      }
+
+      if (imagem) {
+        const imgEl = document.getElementById('artigo-imagem');
+        imgEl.src = imagem;
+        imgEl.alt = titulo;
+        imgEl.style.display = 'block';
+      }
+
+      document.getElementById('artigo-conteudo').innerHTML = DOMPurify.sanitize(conteudo);
+
+      if (tags.length > 0) {
+        document.getElementById('artigo-tags-container').style.display = 'block';
+        document.getElementById('artigo-tags').innerHTML = tags
+          .map(t => `<a href="artigos.html" class="tag-item" onclick="sessionStorage.setItem('filtroTag','${t}')">${t}</a>`)
+          .join('');
+      }
+
+      document.getElementById('loading-section').style.display = 'none';
+      document.getElementById('artigo-section').style.display = 'block';
+    }
+
+    async function carregarRelacionados(artigo) {
+      const id = artigo.id;
+      const categoria = artigo.get('categoria');
+      const tags = artigo.get('tags') || [];
+
+      if (!categoria && tags.length === 0) return;
+
+      try {
+        const Artigo = Parse.Object.extend('Artigo');
+        const resultados = [];
+
+        if (categoria) {
+          const q1 = new Parse.Query(Artigo);
+          q1.equalTo('categoria', categoria);
+          q1.equalTo('publicado', true);
+          q1.notEqualTo('objectId', id);
+          q1.limit(3);
+          const r1 = await q1.find();
+          r1.forEach(a => { if (!resultados.find(r => r.id === a.id)) resultados.push(a); });
+        }
+
+        if (tags.length > 0 && resultados.length < 3) {
+          const q2 = new Parse.Query(Artigo);
+          q2.containedIn('tags', tags);
+          q2.equalTo('publicado', true);
+          q2.notEqualTo('objectId', id);
+          q2.limit(3);
+          const r2 = await q2.find();
+          r2.forEach(a => { if (!resultados.find(r => r.id === a.id)) resultados.push(a); });
+        }
+
+        if (resultados.length > 0) {
+          const widget = document.getElementById('relacionados-widget');
+          widget.style.display = 'block';
+          const lista = document.getElementById('relacionados-lista');
+          lista.innerHTML = resultados.slice(0, 4).map(a => {
+            const img = a.get('imagem');
+            const thumbHtml = img
+              ? `<img src="${img}" class="related-thumb" alt="">`
+              : `<div class="related-thumb-placeholder">📄</div>`;
+            return `
+              <a href="artigo.html?id=${a.id}" class="related-card">
+                ${thumbHtml}
+                <div class="related-info">
+                  <div style="font-size:0.9rem;">${a.get('titulo') || 'Sem título'}</div>
+                  <small>${formatarData(a.get('data') || a.createdAt)}</small>
+                </div>
+              </a>`;
+          }).join('');
+        }
+      } catch (e) {
+        // silently ignore
+      }
+    }
+
+    async function carregarMaisArtigos(idAtual) {
+      try {
+        const Artigo = Parse.Object.extend('Artigo');
+        const query = new Parse.Query(Artigo);
+        query.equalTo('publicado', true);
+        query.descending('data');
+        query.notEqualTo('objectId', idAtual);
+        query.limit(5);
+        const artigos = await query.find();
+
+        const lista = document.getElementById('mais-artigos-lista');
+        if (artigos.length === 0) {
+          lista.innerHTML = '<p class="text-muted" style="font-size:0.85rem;">Nenhum outro artigo.</p>';
+          return;
+        }
+
+        lista.innerHTML = artigos.map(a => {
+          const img = a.get('imagem');
+          const thumbHtml = img
+            ? `<img src="${img}" class="related-thumb" alt="">`
+            : `<div class="related-thumb-placeholder">📄</div>`;
+          return `
+            <a href="artigo.html?id=${a.id}" class="related-card">
+              ${thumbHtml}
+              <div class="related-info">
+                <div style="font-size:0.9rem;">${a.get('titulo') || 'Sem título'}</div>
+                <small>${formatarData(a.get('data') || a.createdAt)}</small>
+              </div>
+            </a>`;
+        }).join('');
+      } catch (e) {
+        // silently ignore
+      }
+    }
+
+    function mostrarErro() {
+      document.getElementById('loading-section').style.display = 'none';
+      document.getElementById('erro-section').style.display = 'block';
+    }
+
+    carregarArtigo();
+  </script>
+
+</body>
+
+</html>
