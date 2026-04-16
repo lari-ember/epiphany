@@ -11,6 +11,17 @@
         .replace(/'/g, '&#39;');
     }
 
+    function sanitizeUrl(url) {
+      const valor = (url || '').trim();
+      if (!valor) return '';
+      try {
+        const parsed = new URL(valor, window.location.href);
+        return (parsed.protocol === 'http:' || parsed.protocol === 'https:') ? parsed.href : '';
+      } catch (_) {
+        return '';
+      }
+    }
+
     function mostrarToast(msg, tipo) {
       const el = document.getElementById('toast-msg');
       const texto = document.getElementById('toast-texto');
@@ -71,7 +82,7 @@
     }
 
     function previewImagem() {
-      const url = document.getElementById('campo-imagem').value;
+      const url = sanitizeUrl(document.getElementById('campo-imagem').value);
       const preview = document.getElementById('imagem-preview');
       if (url) {
         preview.src = url;
@@ -138,7 +149,7 @@
         artigo.set('categoria', document.getElementById('campo-categoria').value.trim());
         artigo.set('autor', document.getElementById('campo-autor').value.trim() || 'Larissa Ember');
         artigo.set('conteudo', document.getElementById('campo-conteudo').value.trim());
-        artigo.set('imagem', document.getElementById('campo-imagem').value.trim());
+        artigo.set('imagem', sanitizeUrl(document.getElementById('campo-imagem').value));
         artigo.set('tags', tags);
         artigo.set('data', dataObj);
         artigo.set('publicado', document.getElementById('campo-publicado').checked);
@@ -181,7 +192,7 @@
         document.getElementById('categorias-sugestoes').innerHTML = cats.map(c => `<option value="${c}">`).join('');
 
         if (artigos.length === 0) {
-          lista.innerHTML = '<p class="text-muted text-center py-3" class="u-fs-09">Nenhum artigo ainda. Crie o primeiro!</p>';
+          lista.innerHTML = '<p class="text-muted text-center py-3 u-fs-09">Nenhum artigo ainda. Crie o primeiro!</p>';
           return;
         }
 
@@ -203,15 +214,15 @@
                 </div>
               </div>
               <div class="d-flex flex-column gap-1 flex-shrink-0">
-                <button class="btn btn-sm btn-outline-light" class="u-fs-075" onclick="editarArtigo('${escapeHtml(a.id)}')">Editar</button>
-                <a href="artigo.html?id=${escapeHtml(a.id)}" target="_blank" class="btn btn-sm btn-outline-secondary" class="u-fs-075">Ver</a>
-                <button class="btn btn-sm btn-outline-danger" class="u-fs-075" onclick="excluirArtigo('${escapeHtml(a.id)}')">Excluir</button>
+                <button class="btn btn-sm btn-outline-light u-fs-075" onclick="editarArtigo('${escapeHtml(a.id)}')">Editar</button>
+                <a href="artigo.html?id=${escapeHtml(a.id)}" target="_blank" class="btn btn-sm btn-outline-secondary u-fs-075">Ver</a>
+                <button class="btn btn-sm btn-outline-danger u-fs-075" onclick="excluirArtigo('${escapeHtml(a.id)}')">Excluir</button>
               </div>
             </div>`;
         }).join('');
 
       } catch (error) {
-        lista.innerHTML = `<p class="text-danger text-center py-3">Erro ao carregar: ${error.message}</p>`;
+        lista.innerHTML = `<p class="text-danger text-center py-3">Erro ao carregar: ${escapeHtml(error.message)}</p>`;
       }
     }
 

@@ -12,6 +12,39 @@
       return params.get('id');
     }
 
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function sanitizeUrl(url) {
+      const valor = (url || '').trim();
+      if (!valor) return '';
+      try {
+        const parsed = new URL(valor, window.location.href);
+        return (parsed.protocol === 'http:' || parsed.protocol === 'https:') ? parsed.href : '';
+      } catch (_) {
+        return '';
+      }
+    }
+
+    function encodeForOnclick(value) {
+      return encodeURIComponent(String(value ?? ''));
+    }
+
+    function setFiltroTagEncoded(tagEncoded) {
+      try {
+        sessionStorage.setItem('filtroTag', decodeURIComponent(tagEncoded));
+      } catch (_) {
+        sessionStorage.setItem('filtroTag', tagEncoded);
+      }
+    }
+
     async function carregarArtigo() {
       const id = getIdFromUrl();
       if (!id) {
@@ -44,7 +77,7 @@
       const categoria = artigo.get('categoria') || '';
       const conteudo = artigo.get('conteudo') || '';
       const data = artigo.get('data') || artigo.createdAt;
-      const imagem = artigo.get('imagem') || '';
+      const imagem = sanitizeUrl(artigo.get('imagem') || '');
       const tags = artigo.get('tags') || [];
       const autor = artigo.get('autor') || 'Larissa Ember';
 
@@ -74,7 +107,7 @@
       if (tags.length > 0) {
         document.getElementById('artigo-tags-container').style.display = 'block';
         document.getElementById('artigo-tags').innerHTML = tags
-          .map(t => `<a href="artigos.html" class="tag-item" onclick="sessionStorage.setItem('filtroTag','${t}')">${t}</a>`)
+          .map(t => `<a href="artigos.html" class="tag-item" onclick="setFiltroTagEncoded('${encodeForOnclick(t)}')">${escapeHtml(t)}</a>`)
           .join('');
       }
 
@@ -118,15 +151,17 @@
           widget.style.display = 'block';
           const lista = document.getElementById('relacionados-lista');
           lista.innerHTML = resultados.slice(0, 4).map(a => {
-            const img = a.get('imagem');
+            const img = sanitizeUrl(a.get('imagem'));
+            const id = encodeURIComponent(a.id);
+            const titulo = escapeHtml(a.get('titulo') || 'Sem título');
             const thumbHtml = img
-              ? `<img src="${img}" class="related-thumb" alt="">`
+              ? `<img src="${img}" class="related-thumb" alt="${titulo}">`
               : `<div class="related-thumb-placeholder">📄</div>`;
             return `
-              <a href="artigo.html?id=${a.id}" class="related-card">
+              <a href="artigo.html?id=${id}" class="related-card">
                 ${thumbHtml}
                 <div class="related-info">
-                  <div class="u-fs-09">${a.get('titulo') || 'Sem título'}</div>
+                  <div class="u-fs-09">${titulo}</div>
                   <small>${formatarData(a.get('data') || a.createdAt)}</small>
                 </div>
               </a>`;
@@ -149,20 +184,22 @@
 
         const lista = document.getElementById('mais-artigos-lista');
         if (artigos.length === 0) {
-          lista.innerHTML = '<p class="text-muted" class="u-fs-085">Nenhum outro artigo.</p>';
+          lista.innerHTML = '<p class="text-muted u-fs-085">Nenhum outro artigo.</p>';
           return;
         }
 
         lista.innerHTML = artigos.map(a => {
-          const img = a.get('imagem');
+          const img = sanitizeUrl(a.get('imagem'));
+          const id = encodeURIComponent(a.id);
+          const titulo = escapeHtml(a.get('titulo') || 'Sem título');
           const thumbHtml = img
-            ? `<img src="${img}" class="related-thumb" alt="">`
+            ? `<img src="${img}" class="related-thumb" alt="${titulo}">`
             : `<div class="related-thumb-placeholder">📄</div>`;
           return `
-            <a href="artigo.html?id=${a.id}" class="related-card">
+            <a href="artigo.html?id=${id}" class="related-card">
               ${thumbHtml}
               <div class="related-info">
-                <div class="u-fs-09">${a.get('titulo') || 'Sem título'}</div>
+                <div class="u-fs-09">${titulo}</div>
                 <small>${formatarData(a.get('data') || a.createdAt)}</small>
               </div>
             </a>`;

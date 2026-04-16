@@ -25,6 +25,14 @@
       return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
     }
 
+    function encodeForOnclick(value) {
+      return encodeURIComponent(String(value ?? ''));
+    }
+
+    function decodeFromOnclick(value) {
+      try { return decodeURIComponent(value); } catch (_) { return value; }
+    }
+
     function renderizarArtigos(artigos) {
       const container = document.getElementById('artigos-container');
 
@@ -52,11 +60,11 @@
           : `<div class="img-placeholder">📄</div>`;
 
         const categoriaHtml = categoria
-          ? `<span class="categoria-badge" onclick="filtrarPorCategoria('${categoria}')" class="u-cursor-pointer">${categoria}</span>`
+          ? `<span class="categoria-badge u-cursor-pointer" onclick="filtrarPorCategoriaEncoded('${encodeForOnclick(categoria)}')">${escapeHtml(categoria)}</span>`
           : '';
 
         const tagsHtml = tags.length
-          ? tags.map(t => `<span class="tag-item" onclick="filtrarPorTag('${escapeHtml(t)}')">${escapeHtml(t)}</span>`).join('')
+          ? tags.map(t => `<span class="tag-item" onclick="filtrarPorTagEncoded('${encodeForOnclick(t)}')">${escapeHtml(t)}</span>`).join('')
           : '';
 
         return `
@@ -92,12 +100,12 @@
 
       const catLista = document.getElementById('categorias-lista');
       if (Object.keys(categoriasMap).length === 0) {
-        catLista.innerHTML = '<p class="text-muted" class="u-fs-085">Nenhuma categoria ainda.</p>';
+        catLista.innerHTML = '<p class="text-muted u-fs-085">Nenhuma categoria ainda.</p>';
       } else {
         catLista.innerHTML = Object.entries(categoriasMap)
           .sort((a, b) => b[1] - a[1])
           .map(([cat, count]) =>
-            `<a class="categoria-item d-flex" onclick="filtrarPorCategoria('${escapeHtml(cat)}')" href="#">
+            `<a class="categoria-item d-flex" onclick="filtrarPorCategoriaEncoded('${encodeForOnclick(cat)}')" href="#">
               <span>${escapeHtml(cat)}</span><span class="categoria-count">${count}</span>
             </a>`)
           .join('');
@@ -112,12 +120,20 @@
 
       const tagsLista = document.getElementById('tags-lista');
       if (Object.keys(tagsSet).length === 0) {
-        tagsLista.innerHTML = '<p class="text-muted" class="u-fs-085">Nenhuma tag ainda.</p>';
+        tagsLista.innerHTML = '<p class="text-muted u-fs-085">Nenhuma tag ainda.</p>';
       } else {
         tagsLista.innerHTML = Object.keys(tagsSet)
-          .map(t => `<a class="tag-item" onclick="filtrarPorTag('${escapeHtml(t)}')" href="#">${escapeHtml(t)}</a>`)
+          .map(t => `<a class="tag-item" onclick="filtrarPorTagEncoded('${encodeForOnclick(t)}')" href="#">${escapeHtml(t)}</a>`)
           .join('');
       }
+    }
+
+    function filtrarPorCategoriaEncoded(categoriaEncoded) {
+      filtrarPorCategoria(decodeFromOnclick(categoriaEncoded));
+    }
+
+    function filtrarPorTagEncoded(tagEncoded) {
+      filtrarPorTag(decodeFromOnclick(tagEncoded));
     }
 
     function filtrarPorCategoria(categoria) {

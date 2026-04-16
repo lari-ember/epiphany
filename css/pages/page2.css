@@ -10,13 +10,12 @@ body {
         pink 75%,
         lightblue 100%
     );
-    background-repeat: no-repeat;;
+    background-repeat: no-repeat;
 }
 
 p {
     color: rgb(41, 41, 41);
     font-weight: bold;
-    border: 40px;
     font-size: 32px;
 }
 
