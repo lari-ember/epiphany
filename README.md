@@ -47,7 +47,11 @@ epiphany/
 │   ├── more.css                            ← Estilos das crônicas e blog
 │   ├── estilos.css                         ← Fontes (Playfair Display)
 │   ├── product.css                         ← Estilos da página inicial
-│   └── pestilo.css                         ← Estilos do perfil social
+│   ├── pestilo.css                         ← Estilos do perfil social
+│   ├── shared.css                          ← Classes utilitárias reutilizáveis
+│   └── pages/                              ← CSS extraído de cada página HTML
+├── js/
+│   └── pages/                              ← JavaScript extraído de cada página HTML
 ├── images/                                 ← Imagens do site
 └── projetos/
     └── pokedex.html                        ← Projeto Pokédex

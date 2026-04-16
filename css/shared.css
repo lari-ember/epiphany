@@ -1,0 +1,14 @@
+/* Utilitários reutilizáveis */
+.u-hidden { display: none; }
+.u-text-center-pad-3 { text-align: center; padding: 3rem 0; }
+.u-text-muted-aaa { color: #aaa; }
+.u-fs-075 { font-size: 0.75rem; }
+.u-fs-085 { font-size: 0.85rem; }
+.u-fs-09 { font-size: 0.9rem; }
+.u-fs-2 { font-size: 2rem; }
+.u-fs-3 { font-size: 3rem; }
+.u-cursor-pointer { cursor: pointer; }
+.u-heading-accent { color: rgb(108, 224, 195); }
+.u-label-muted { color: #ccc; }
+.u-spinner-sm { width: 18px; height: 18px; border-width: 2px; }
+.u-accent-color { color: var(--accent); }
