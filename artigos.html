@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Artigos sobre programação, desenvolvimento web e tecnologia por Larissa Ember.">
+  <meta property="og:title" content="Artigos — The Last Epiphany" />
+  <meta property="og:description" content="Artigos sobre programação, desenvolvimento web e tecnologia por Larissa Ember." />
+  <meta property="og:image" content="./images/jujusamaaa.png" />
+  <meta name="twitter:image" content="./images/jujusamaaa.png" />
+  <meta name="author" content="Larissa Ember">
+
+  <title>Artigos — The Last Epiphany</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/jujusamaaa.png" sizes="192x192">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link href="./css/product.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgb(51, 51, 51);
+      color: #f0f0f0;
+    }
+
+    main {
+      background-color: rgb(51, 51, 51);
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 280px;
+      margin: auto;
+    }
+
+    .hero-artigos {
+      background: linear-gradient(to right,
+          rgb(51, 51, 51) 0%,
+          rgb(108, 224, 195) 90%,
+          paleturquoise 100%);
+      border-radius: 10px;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-card {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      height: 100%;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(108, 224, 195, 0.2);
+    }
+
+    .article-card .card-body {
+      padding: 1.25rem;
+    }
+
+    .article-card .card-title a {
+      color: #f0f0f0;
+      text-decoration: none;
+    }
+
+    .article-card .card-title a:hover {
+      color: rgb(108, 224, 195);
+    }
+
+    .article-card .categoria-badge {
+      background-color: rgba(108, 224, 195, 0.2);
+      color: rgb(108, 224, 195);
+      border: 1px solid rgb(108, 224, 195);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-card .card-text {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .article-card .data-texto {
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    .article-card .read-more {
+      color: rgb(108, 224, 195);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .article-card .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .article-card .card-img-top {
+      border-radius: 10px 10px 0 0;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .article-card .img-placeholder {
+      height: 180px;
+      background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 2rem;
+    }
+
+    .sidebar-widget {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-widget h5 {
+      color: rgb(108, 224, 195);
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .categoria-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      cursor: pointer;
+      color: #aaa;
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 4px 6px;
+    }
+
+    .categoria-item:hover,
+    .categoria-item.ativo {
+      background-color: rgba(108, 224, 195, 0.1);
+      color: rgb(108, 224, 195);
+    }
+
+    .categoria-count {
+      background-color: #444;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      padding: 1px 7px;
+    }
+
+    .tag-item {
+      background-color: #3a3a3a;
+      color: #aaa;
+      border-radius: 4px;
+      padding: 3px 9px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin: 3px 2px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .tag-item:hover,
+    .tag-item.ativo {
+      background-color: rgba(108, 224, 195, 0.15);
+      color: rgb(108, 224, 195);
+    }
+
+    .loading-msg {
+      text-align: center;
+      color: #aaa;
+      padding: 3rem 0;
+    }
+
+    .loading-spinner {
+      border: 3px solid #444;
+      border-top: 3px solid rgb(108, 224, 195);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .empty-msg {
+      text-align: center;
+      color: #777;
+      padding: 3rem 0;
+    }
+
+    .filtro-ativo {
+      background-color: rgba(108, 224, 195, 0.1);
+      border: 1px solid rgba(108, 224, 195, 0.4);
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      color: rgb(108, 224, 195);
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .filtro-ativo.visivel {
+      display: inline-flex;
+    }
+
+    .filtro-ativo button {
+      background: none;
+      border: none;
+      color: rgb(108, 224, 195);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0;
+      line-height: 1;
+    }
+
+    footer {
+      color: #aaa;
+    }
+
+    footer h5 {
+      color: #f0f0f0;
+    }
+
+    .admin-link {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background-color: rgb(108, 224, 195);
+      color: #1a1a1a;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 100;
+    }
+
+    .admin-link:hover {
+      background-color: paleturquoise;
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="index.html" aria-label="Product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="index.html">home</a>
+      <a class="py-2 d-none d-md-inline-block" href="artigos.html">Artigos</a>
+      <a class="py-2 d-none d-md-inline-block" href="comicas.html">Crônicas</a>
+      <a class="py-2 d-none d-md-inline-block" href="profile.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="hero-artigos text-white">
+      <h1 class="display-5 fw-bold">Artigos</h1>
+      <p class="lead mb-0">Pensamentos, descobertas e anotações sobre programação, dev web e outras coisas!</p>
+    </div>
+
+    <div class="row">
+
+      <!-- Lista de Artigos -->
+      <div class="col-md-8">
+        <div class="d-flex align-items-center mb-3 gap-2 flex-wrap">
+          <h4 class="mb-0 me-auto" id="secao-titulo">Todos os artigos</h4>
+          <span class="filtro-ativo" id="filtro-ativo-badge">
+            <span id="filtro-ativo-texto"></span>
+            <button onclick="limparFiltro()" title="Remover filtro">&times;</button>
+          </span>
+        </div>
+
+        <div id="artigos-container">
+          <div class="loading-msg">
+            <div class="loading-spinner"></div>
+            <p>Carregando artigos...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="col-md-4">
+
+        <div class="sidebar-widget">
+          <h5>Categorias</h5>
+          <div id="categorias-lista">
+            <p class="text-muted" style="font-size:0.85rem;">Carregando...</p>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h5>Tags</h5>
+          <div id="tags-lista">
+            <p class="text-muted" style="font-size:0.85rem;">Carregando...</p>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h5>Sobre</h5>
+          <p style="color:#aaa; font-size:0.9rem;">Artigos escritos por Larissa Ember sobre programação, desenvolvimento web, front-end e as aventuras tecnológicas do dia a dia.</p>
+          <a href="profile.html" class="btn btn-outline-light btn-sm">Perfil</a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+        <small class="d-block mb-3 text-light">&copy;Larissa Ember 2022</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Neste Site</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="artigos.html">Artigos</a></li>
+          <li><a class="link-secondary" href="comicas.html">Crônicas</a></li>
+          <li><a class="link-secondary" href="projetos/pokedex.html">Pokedex</a></li>
+          <li><a class="link-secondary" href="#">Galeria de Projetos</a></li>
+          <li><a class="link-secondary" href="#">Portifolio</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Midias</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="https://discord.gg/jWzjDQSE">Servidor no Discord</a></li>
+          <li><a class="link-secondary" href="profile.html">Contato comercial</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Recursos</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="#">Parcerias</a></li>
+          <li><a class="link-secondary" href="#">Treinamento</a></li>
+          <li><a class="link-secondary" href="#">Referências</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Sobre Institucional</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary" href="profile.html">A Larissa</a></li>
+          <li><a class="link-secondary" href="#">Direitos Autorais</a></li>
+          <li><a class="link-secondary" href="#">Privacidade</a></li>
+          <li><a class="link-secondary" href="#">Termos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante para admin -->
+  <a href="admin-artigos.html" class="admin-link" title="Gerenciar Artigos">✏️</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.back4app.com/libs/parse/2.8.4/parse.min.js"></script>
+  <script>
+    Parse.initialize("5YfqtpvHcsmbZ6xMJdi44NtBDDRubXz8cxPy5cbc", "PUbi70m8VLyjXnavTPA3B4fmplgho4F4vBZjyImd");
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    let todosArtigos = [];
+    let filtroAtual = { tipo: null, valor: null };
+
+    function formatarData(data) {
+      if (!data) return '';
+      const d = new Date(data);
+      return d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function truncar(texto, limite) {
+      if (!texto) return '';
+      return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
+    }
+
+    function renderizarArtigos(artigos) {
+      const container = document.getElementById('artigos-container');
+
+      if (!artigos || artigos.length === 0) {
+        container.innerHTML = `
+          <div class="empty-msg">
+            <p style="font-size:3rem;">📝</p>
+            <p>Nenhum artigo encontrado.</p>
+            <a href="admin-artigos.html" class="btn btn-outline-light btn-sm">Adicionar artigo</a>
+          </div>`;
+        return;
+      }
+
+      const cards = artigos.map(artigo => {
+        const id = artigo.id;
+        const titulo = artigo.get('titulo') || 'Sem título';
+        const subtitulo = artigo.get('subtitulo') || '';
+        const categoria = artigo.get('categoria') || '';
+        const data = artigo.get('data') || artigo.createdAt;
+        const imagem = artigo.get('imagem') || '';
+        const tags = artigo.get('tags') || [];
+
+        const imagemHtml = imagem
+          ? `<img src="${imagem}" class="card-img-top" alt="${titulo}">`
+          : `<div class="img-placeholder">📄</div>`;
+
+        const categoriaHtml = categoria
+          ? `<span class="categoria-badge" onclick="filtrarPorCategoria('${categoria}')" style="cursor:pointer">${categoria}</span>`
+          : '';
+
+        const tagsHtml = tags.length
+          ? tags.map(t => `<span class="tag-item" onclick="filtrarPorTag('${t}')">${t}</span>`).join('')
+          : '';
+
+        return `
+          <div class="col-sm-6 mb-4">
+            <div class="article-card card">
+              ${imagemHtml}
+              <div class="card-body d-flex flex-column">
+                ${categoriaHtml}
+                <h5 class="card-title">
+                  <a href="artigo.html?id=${id}">${titulo}</a>
+                </h5>
+                <p class="card-text flex-grow-1">${truncar(subtitulo, 120)}</p>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="data-texto">${formatarData(data)}</span>
+                  <a href="artigo.html?id=${id}" class="read-more">Ler mais →</a>
+                </div>
+                ${tagsHtml ? `<div class="mt-2">${tagsHtml}</div>` : ''}
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+
+      container.innerHTML = `<div class="row">${cards}</div>`;
+    }
+
+    function renderizarSidebar(artigos) {
+      // Categorias
+      const categoriasMap = {};
+      artigos.forEach(a => {
+        const cat = a.get('categoria');
+        if (cat) categoriasMap[cat] = (categoriasMap[cat] || 0) + 1;
+      });
+
+      const catLista = document.getElementById('categorias-lista');
+      if (Object.keys(categoriasMap).length === 0) {
+        catLista.innerHTML = '<p class="text-muted" style="font-size:0.85rem;">Nenhuma categoria ainda.</p>';
+      } else {
+        catLista.innerHTML = Object.entries(categoriasMap)
+          .sort((a, b) => b[1] - a[1])
+          .map(([cat, count]) =>
+            `<a class="categoria-item d-flex" onclick="filtrarPorCategoria('${cat}')" href="#">
+              <span>${cat}</span><span class="categoria-count">${count}</span>
+            </a>`)
+          .join('');
+      }
+
+      // Tags
+      const tagsSet = {};
+      artigos.forEach(a => {
+        const tags = a.get('tags') || [];
+        tags.forEach(t => { tagsSet[t] = true; });
+      });
+
+      const tagsLista = document.getElementById('tags-lista');
+      if (Object.keys(tagsSet).length === 0) {
+        tagsLista.innerHTML = '<p class="text-muted" style="font-size:0.85rem;">Nenhuma tag ainda.</p>';
+      } else {
+        tagsLista.innerHTML = Object.keys(tagsSet)
+          .map(t => `<a class="tag-item" onclick="filtrarPorTag('${t}')" href="#">${t}</a>`)
+          .join('');
+      }
+    }
+
+    function filtrarPorCategoria(categoria) {
+      filtroAtual = { tipo: 'categoria', valor: categoria };
+      document.getElementById('secao-titulo').textContent = `Categoria: ${categoria}`;
+      const badge = document.getElementById('filtro-ativo-badge');
+      document.getElementById('filtro-ativo-texto').textContent = `Categoria: ${categoria}`;
+      badge.classList.add('visivel');
+      const filtrados = todosArtigos.filter(a => a.get('categoria') === categoria);
+      renderizarArtigos(filtrados);
+      document.querySelectorAll('.categoria-item').forEach(el => {
+        el.classList.toggle('ativo', el.textContent.trim().startsWith(categoria));
+      });
+    }
+
+    function filtrarPorTag(tag) {
+      filtroAtual = { tipo: 'tag', valor: tag };
+      document.getElementById('secao-titulo').textContent = `Tag: ${tag}`;
+      const badge = document.getElementById('filtro-ativo-badge');
+      document.getElementById('filtro-ativo-texto').textContent = `Tag: ${tag}`;
+      badge.classList.add('visivel');
+      const filtrados = todosArtigos.filter(a => (a.get('tags') || []).includes(tag));
+      renderizarArtigos(filtrados);
+      document.querySelectorAll('.tag-item').forEach(el => {
+        el.classList.toggle('ativo', el.textContent.trim() === tag);
+      });
+    }
+
+    function limparFiltro() {
+      filtroAtual = { tipo: null, valor: null };
+      document.getElementById('secao-titulo').textContent = 'Todos os artigos';
+      document.getElementById('filtro-ativo-badge').classList.remove('visivel');
+      renderizarArtigos(todosArtigos);
+      document.querySelectorAll('.categoria-item, .tag-item').forEach(el => el.classList.remove('ativo'));
+    }
+
+    async function carregarArtigos() {
+      try {
+        const Artigo = Parse.Object.extend('Artigo');
+        const query = new Parse.Query(Artigo);
+        query.equalTo('publicado', true);
+        query.descending('data');
+        query.limit(100);
+        todosArtigos = await query.find();
+        renderizarArtigos(todosArtigos);
+        renderizarSidebar(todosArtigos);
+      } catch (error) {
+        document.getElementById('artigos-container').innerHTML = `
+          <div class="empty-msg">
+            <p style="font-size:2rem;">⚠️</p>
+            <p>Não foi possível carregar os artigos.</p>
+            <small class="text-muted">${error.message}</small>
+          </div>`;
+      }
+    }
+
+    carregarArtigos();
+  </script>
+
+</body>
+
+</html>
