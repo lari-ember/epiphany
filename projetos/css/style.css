@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -12,6 +11,7 @@ body {
     text-align: center;
     background: linear-gradient(to bottom, #f19fc4, rgb(51, 51, 51));
     min-height: 100vh;
+    padding-bottom: 2rem;
 }
 
 main {
@@ -64,7 +64,51 @@ main {
     font-weight: 600;
     color: #3a444d;
     font-size: clamp(8px, 5vw, 1rem);
-    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+
+.pokemon__details {
+    width: min(90%, 425px);
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #3a444d;
+    font-size: clamp(8px, 2.5vw, 0.8rem);
+    text-align: left;
+}
+
+.pokemon__details h3,
+.pokemon__details h4 {
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.details__list,
+.pokemon__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem 0.8rem;
+}
+
+.details__list div {
+    min-width: 0;
+}
+
+.details__list dt {
+    font-weight: 700;
+}
+
+.details__list dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    text-transform: capitalize;
+}
+
+.pokemon__stats {
+    list-style: none;
+    text-transform: capitalize;
 }
 
 .buttons {
@@ -92,4 +136,31 @@ main {
 .button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+footer {
+    margin: 1rem auto;
+}
+
+footer .button {
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
