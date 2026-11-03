@@ -1,0 +1,289 @@
+{
+  "1": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=bulbasaur | https://pokemondb.net/pokedex/bulbasaur | https://www.serebii.net/pokedex-sv/bulbasaur/"
+  },
+  "4": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=charmander | https://pokemondb.net/pokedex/charmander | https://www.serebii.net/pokedex-sv/charmander/"
+  },
+  "7": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=squirtle | https://pokemondb.net/pokedex/squirtle | https://www.serebii.net/pokedex-sv/squirtle/"
+  },
+  "25": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=pikachu | https://pokemondb.net/pokedex/pikachu | https://www.serebii.net/pokedex-sv/pikachu/"
+  },
+  "52": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=meowth | https://pokemondb.net/pokedex/meowth | https://www.serebii.net/pokedex-sv/meowth/"
+  },
+  "133": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=eevee | https://pokemondb.net/pokedex/eevee | https://www.serebii.net/pokedex-sv/eevee/"
+  },
+  "150": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mewtwo | https://pokemondb.net/pokedex/mewtwo | https://www.serebii.net/pokedex-sv/mewtwo/"
+  },
+  "152": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chikorita | https://pokemondb.net/pokedex/chikorita | https://www.serebii.net/pokedex-sv/chikorita/"
+  },
+  "155": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=cyndaquil | https://pokemondb.net/pokedex/cyndaquil | https://www.serebii.net/pokedex-sv/cyndaquil/"
+  },
+  "158": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=totodile | https://pokemondb.net/pokedex/totodile | https://www.serebii.net/pokedex-sv/totodile/"
+  },
+  "196": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=espeon | https://pokemondb.net/pokedex/espeon | https://www.serebii.net/pokedex-sv/espeon/"
+  },
+  "197": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=umbreon | https://pokemondb.net/pokedex/umbreon | https://www.serebii.net/pokedex-sv/umbreon/"
+  },
+  "249": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lugia | https://pokemondb.net/pokedex/lugia | https://www.serebii.net/pokedex-sv/lugia/"
+  },
+  "250": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ho-oh | https://pokemondb.net/pokedex/ho-oh | https://www.serebii.net/pokedex-sv/ho-oh/"
+  },
+  "252": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=treecko | https://pokemondb.net/pokedex/treecko | https://www.serebii.net/pokedex-sv/treecko/"
+  },
+  "255": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=torchic | https://pokemondb.net/pokedex/torchic | https://www.serebii.net/pokedex-sv/torchic/"
+  },
+  "258": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mudkip | https://pokemondb.net/pokedex/mudkip | https://www.serebii.net/pokedex-sv/mudkip/"
+  },
+  "280": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ralts | https://pokemondb.net/pokedex/ralts | https://www.serebii.net/pokedex-sv/ralts/"
+  },
+  "384": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rayquaza | https://pokemondb.net/pokedex/rayquaza | https://www.serebii.net/pokedex-sv/rayquaza/"
+  },
+  "387": {
+    "game": "Pokémon Diamond & Pearl",
+    "year": 2006,
+    "generation": "Geração IV",
+    "region": "Sinnoh",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=turtwig | https://pokemondb.net/pokedex/turtwig | https://www.serebii.net/pokedex-sv/turtwig/"
+  },
+  "390": {
+    "game": "Pokémon Diamond & Pearl",
+    "year": 2006,
+    "generation": "Geração IV",
+    "region": "Sinnoh",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chimchar | https://pokemondb.net/pokedex/chimchar | https://www.serebii.net/pokedex-sv/chimchar/"
+  },
+  "393": {
+    "game": "Pokémon Diamond & Pearl",
+    "year": 2006,
+    "generation": "Geração IV",
+    "region": "Sinnoh",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=piplup | https://pokemondb.net/pokedex/piplup | https://www.serebii.net/pokedex-sv/piplup/"
+  },
+  "448": {
+    "game": "Pokémon Diamond & Pearl",
+    "year": 2006,
+    "generation": "Geração IV",
+    "region": "Sinnoh",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lucario | https://pokemondb.net/pokedex/lucario | https://www.serebii.net/pokedex-sv/lucario/"
+  },
+  "495": {
+    "game": "Pokémon Black & White",
+    "year": 2010,
+    "generation": "Geração V",
+    "region": "Unova",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=snivy | https://pokemondb.net/pokedex/snivy | https://www.serebii.net/pokedex-sv/snivy/"
+  },
+  "498": {
+    "game": "Pokémon Black & White",
+    "year": 2010,
+    "generation": "Geração V",
+    "region": "Unova",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=tepig | https://pokemondb.net/pokedex/tepig | https://www.serebii.net/pokedex-sv/tepig/"
+  },
+  "501": {
+    "game": "Pokémon Black & White",
+    "year": 2010,
+    "generation": "Geração V",
+    "region": "Unova",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=oshawott | https://pokemondb.net/pokedex/oshawott | https://www.serebii.net/pokedex-sv/oshawott/"
+  },
+  "650": {
+    "game": "Pokémon X & Y",
+    "year": 2013,
+    "generation": "Geração VI",
+    "region": "Kalos",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chespin | https://pokemondb.net/pokedex/chespin | https://www.serebii.net/pokedex-sv/chespin/"
+  },
+  "653": {
+    "game": "Pokémon X & Y",
+    "year": 2013,
+    "generation": "Geração VI",
+    "region": "Kalos",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fennekin | https://pokemondb.net/pokedex/fennekin | https://www.serebii.net/pokedex-sv/fennekin/"
+  },
+  "656": {
+    "game": "Pokémon X & Y",
+    "year": 2013,
+    "generation": "Geração VI",
+    "region": "Kalos",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=froakie | https://pokemondb.net/pokedex/froakie | https://www.serebii.net/pokedex-sv/froakie/"
+  },
+  "722": {
+    "game": "Pokémon Sun & Moon",
+    "year": 2016,
+    "generation": "Geração VII",
+    "region": "Alola",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rowlet | https://pokemondb.net/pokedex/rowlet | https://www.serebii.net/pokedex-sv/rowlet/"
+  },
+  "725": {
+    "game": "Pokémon Sun & Moon",
+    "year": 2016,
+    "generation": "Geração VII",
+    "region": "Alola",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=litten | https://pokemondb.net/pokedex/litten | https://www.serebii.net/pokedex-sv/litten/"
+  },
+  "728": {
+    "game": "Pokémon Sun & Moon",
+    "year": 2016,
+    "generation": "Geração VII",
+    "region": "Alola",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=popplio | https://pokemondb.net/pokedex/popplio | https://www.serebii.net/pokedex-sv/popplio/"
+  },
+  "778": {
+    "game": "Pokémon Sun & Moon",
+    "year": 2016,
+    "generation": "Geração VII",
+    "region": "Alola",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mimikyu | https://pokemondb.net/pokedex/mimikyu | https://www.serebii.net/pokedex-sv/mimikyu/"
+  },
+  "810": {
+    "game": "Pokémon Sword & Shield",
+    "year": 2019,
+    "generation": "Geração VIII",
+    "region": "Galar",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=grookey | https://pokemondb.net/pokedex/grookey | https://www.serebii.net/pokedex-sv/grookey/"
+  },
+  "813": {
+    "game": "Pokémon Sword & Shield",
+    "year": 2019,
+    "generation": "Geração VIII",
+    "region": "Galar",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=scorbunny | https://pokemondb.net/pokedex/scorbunny | https://www.serebii.net/pokedex-sv/scorbunny/"
+  },
+  "816": {
+    "game": "Pokémon Sword & Shield",
+    "year": 2019,
+    "generation": "Geração VIII",
+    "region": "Galar",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sobble | https://pokemondb.net/pokedex/sobble | https://www.serebii.net/pokedex-sv/sobble/"
+  },
+  "905": {
+    "game": "Pokémon Legends: Arceus",
+    "year": 2022,
+    "generation": "Geração VIII",
+    "region": "Hisui",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=enamorus | https://pokemondb.net/pokedex/enamorus | https://www.serebii.net/pokedex-sv/enamorus/"
+  },
+  "906": {
+    "game": "Pokémon Scarlet & Violet",
+    "year": 2022,
+    "generation": "Geração IX",
+    "region": "Paldea",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sprigatito | https://pokemondb.net/pokedex/sprigatito | https://www.serebii.net/pokedex-sv/sprigatito/"
+  },
+  "909": {
+    "game": "Pokémon Scarlet & Violet",
+    "year": 2022,
+    "generation": "Geração IX",
+    "region": "Paldea",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fuecoco | https://pokemondb.net/pokedex/fuecoco | https://www.serebii.net/pokedex-sv/fuecoco/"
+  },
+  "912": {
+    "game": "Pokémon Scarlet & Violet",
+    "year": 2022,
+    "generation": "Geração IX",
+    "region": "Paldea",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=quaxly | https://pokemondb.net/pokedex/quaxly | https://www.serebii.net/pokedex-sv/quaxly/"
+  },
+  "1000": {
+    "game": "Pokémon Scarlet & Violet",
+    "year": 2022,
+    "generation": "Geração IX",
+    "region": "Paldea",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=gholdengo | https://pokemondb.net/pokedex/gholdengo | https://www.serebii.net/pokedex-sv/gholdengo/"
+  }
+}
