@@ -26,5 +26,61 @@
     "generation": "Geração I",
     "region": "Kanto",
     "source": "https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Pok%C3%A9mon)"
+  },
+  "133": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Eevee_(Pok%C3%A9mon)"
+  },
+  "150": {
+    "game": "Pokémon Red & Green",
+    "year": 1996,
+    "generation": "Geração I",
+    "region": "Kanto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Mewtwo_(Pok%C3%A9mon)"
+  },
+  "249": {
+    "game": "Pokémon Gold & Silver",
+    "year": 1999,
+    "generation": "Geração II",
+    "region": "Johto",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Lugia_(Pok%C3%A9mon)"
+  },
+  "384": {
+    "game": "Pokémon Ruby & Sapphire",
+    "year": 2002,
+    "generation": "Geração III",
+    "region": "Hoenn",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Rayquaza_(Pok%C3%A9mon)"
+  },
+  "448": {
+    "game": "Pokémon Diamond & Pearl",
+    "year": 2006,
+    "generation": "Geração IV",
+    "region": "Sinnoh",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)"
+  },
+  "658": {
+    "game": "Pokémon X & Y",
+    "year": 2013,
+    "generation": "Geração VI",
+    "region": "Kalos",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Greninja_(Pok%C3%A9mon)"
+  },
+  "905": {
+    "game": "Pokémon Legends: Arceus",
+    "year": 2022,
+    "generation": "Geração VIII",
+    "region": "Hisui",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Enamorus_(Pok%C3%A9mon)"
+  },
+  "1000": {
+    "game": "Pokémon Scarlet & Violet",
+    "year": 2022,
+    "generation": "Geração IX",
+    "region": "Paldea",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Gholdengo_(Pok%C3%A9mon)"
   }
 }

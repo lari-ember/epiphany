@@ -285,6 +285,17 @@ const setupUI = () => {
       : 'Informação não cadastrada';
 
     list.appendChild(createElement('p', null, `Estreia oficial: ${debut}`));
+    list.appendChild(createElement('p', null, `Fonte da estreia: ${pokemon.debut?.source ?? 'Informação não cadastrada'}`));
+
+    const availability = pokemon.availability;
+    if (availability) {
+      list.appendChild(createElement('p', null, `Capturável em: ${availability.catchableIn?.join(', ') || 'Informação não cadastrada'}`));
+      list.appendChild(createElement('p', null, `Transferência apenas em: ${availability.transferOnlyIn?.join(', ') || 'Informação não cadastrada'}`));
+      list.appendChild(createElement('p', null, `Não disponível: ${availability.notAvailableIn?.join(', ') || 'Informação não cadastrada'}`));
+      list.appendChild(createElement('p', null, `Fonte de disponibilidade: ${availability.source ?? 'Informação não cadastrada'}`));
+    } else {
+      list.appendChild(createElement('p', null, 'Disponibilidade por captura/transferência: Informação não cadastrada'));
+    }
 
     if (pokemon.games.length) {
       list.appendChild(createElement('p', null, `Aparece em: ${pokemon.games.slice(0, 20).join(', ')}`));
@@ -308,6 +319,7 @@ const setupUI = () => {
       pokemon.isLegendary ? 'Este Pokémon é classificado como lendário.' : 'Este Pokémon não é lendário.',
       pokemon.isMythical ? 'Este Pokémon é classificado como mítico.' : 'Este Pokémon não é mítico.',
       pokemon.formsSwitchable ? 'Possui múltiplas formas registradas.' : 'Não possui múltiplas formas registradas.',
+      ...(pokemon.editorialCuriosities.length ? pokemon.editorialCuriosities : ['Curiosidades editoriais: Informação não cadastrada.']),
     ];
 
     curiosities.forEach((item) => list.appendChild(createElement('li', null, item)));

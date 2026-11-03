@@ -78,7 +78,10 @@ const parseEvolutionNodes = (node, chain = []) => {
   return chain;
 };
 
-const transformPokemonData = async (pokemon, species, generationData, debutData, isShiny = false) => {
+const transformPokemonData = async (pokemon, species, generationData, metadata, isShiny = false) => {
+  const debutData = metadata?.debutData ?? {};
+  const curiositiesData = metadata?.curiositiesData ?? {};
+  const availabilityData = metadata?.availabilityData ?? {};
   const generationInfo = GENERATION_REGION[species.generation.name] ?? {
     label: sanitize(species.generation.name),
     region: 'Desconhecida',
@@ -145,6 +148,8 @@ const transformPokemonData = async (pokemon, species, generationData, debutData,
     games,
     generationGames,
     debut: debutData?.[String(pokemon.id)] ?? null,
+    editorialCuriosities: curiositiesData?.[String(pokemon.id)]?.items ?? [],
+    availability: availabilityData?.[String(pokemon.id)] ?? null,
     artwork: getArtwork(pokemon, isShiny),
     sprite: getSprite(pokemon, isShiny),
     cry: pokemon.cries?.latest ?? pokemon.cries?.legacy ?? null,
@@ -155,12 +160,17 @@ const transformPokemonData = async (pokemon, species, generationData, debutData,
   };
 };
 
-const fetchCompletePokemon = async ({ query, isShiny, debutData, signalSearch }) => {
+const fetchCompletePokemon = async ({
+  query,
+  isShiny,
+  metadata,
+  signalSearch,
+}) => {
   const pokemon = await fetchPokemon(query, { useAbort: signalSearch });
   const species = await fetchSpecies(pokemon.id);
   const generationData = await fetchGeneration(species.generation.url);
 
-  return transformPokemonData(pokemon, species, generationData, debutData, isShiny);
+  return transformPokemonData(pokemon, species, generationData, metadata, isShiny);
 };
 
 const loadEvolutionChain = async (evolutionChainUrl) => {

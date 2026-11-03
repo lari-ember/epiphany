@@ -1,0 +1,44 @@
+{
+  "1": {
+    "catchableIn": ["Pokémon Red/Blue", "Pokémon FireRed/LeafGreen", "Pokémon Let's Go"],
+    "transferOnlyIn": ["Pokémon Sword/Shield (HOME)", "Pokémon Scarlet/Violet (HOME)"],
+    "notAvailableIn": ["Pokémon Legends: Arceus"],
+    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
+  },
+  "25": {
+    "catchableIn": ["Pokémon Yellow", "Pokémon Let's Go Pikachu", "Pokémon Scarlet/Violet"],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
+  },
+  "150": {
+    "catchableIn": ["Pokémon Red/Blue (evento local)", "Pokémon Let's Go", "Pokémon Sword/Shield (DLC)"],
+    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
+    "notAvailableIn": [],
+    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+  },
+  "249": {
+    "catchableIn": ["Pokémon Gold/Silver", "Pokémon HeartGold/SoulSilver"],
+    "transferOnlyIn": ["Pokémon Sword/Shield (DLC)", "Pokémon Scarlet/Violet (HOME)"],
+    "notAvailableIn": ["Pokémon Black/White sem transferência"],
+    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+  },
+  "384": {
+    "catchableIn": ["Pokémon Ruby/Sapphire", "Pokémon Emerald", "Pokémon Omega Ruby/Alpha Sapphire"],
+    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
+    "notAvailableIn": [],
+    "source": "Curadoria manual baseada em Bulbapedia e Pokémon Database"
+  },
+  "658": {
+    "catchableIn": ["Pokémon X/Y", "Pokémon Scarlet/Violet (DLC)"],
+    "transferOnlyIn": ["Pokémon Sword/Shield (HOME)"],
+    "notAvailableIn": [],
+    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
+  },
+  "905": {
+    "catchableIn": ["Pokémon Legends: Arceus"],
+    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
+    "notAvailableIn": ["Jogos principais anteriores à Geração VIII"],
+    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+  }
+}

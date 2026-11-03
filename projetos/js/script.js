@@ -35,7 +35,11 @@ const state = {
   collection: getCollection(),
   settings: getSettings(),
   history: getHistory(),
-  debutData: {},
+  metadata: {
+    debutData: {},
+    curiositiesData: {},
+    availabilityData: {},
+  },
 };
 
 const rangeClamp = (id) => Math.min(state.pokemonLimit, Math.max(1, id));
@@ -86,14 +90,28 @@ const refreshTopLevelUI = () => {
   updateNavButtons();
 };
 
-const loadDebutData = async () => {
+const loadJsonData = async (path, fallback = {}) => {
   try {
-    const response = await fetch('./js/data/pokemon-debuts.json');
-    if (!response.ok) throw new Error('Sem metadados de estreia.');
-    state.debutData = await response.json();
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`Sem metadados em ${path}`);
+    return await response.json();
   } catch {
-    state.debutData = {};
+    return fallback;
   }
+};
+
+const loadMetadata = async () => {
+  const [debutData, curiositiesData, availabilityData] = await Promise.all([
+    loadJsonData('./js/data/pokemon-debuts.json'),
+    loadJsonData('./js/data/pokemon-curiosities.json'),
+    loadJsonData('./js/data/pokemon-availability.json'),
+  ]);
+
+  state.metadata = {
+    debutData,
+    curiositiesData,
+    availabilityData,
+  };
 };
 
 const renderTab = async (tabName) => {
@@ -166,7 +184,7 @@ const renderPokemon = async (query) => {
     const pokemon = await fetchCompletePokemon({
       query,
       isShiny: state.settings.shiny,
-      debutData: state.debutData,
+      metadata: state.metadata,
       signalSearch: true,
     });
 
@@ -273,7 +291,7 @@ const bindCompareHandlers = () => {
       const pokemon = await fetchCompletePokemon({
         query: value,
         isShiny: false,
-        debutData: state.debutData,
+        metadata: state.metadata,
         signalSearch: false,
       });
       state.comparePokemon = pokemon;
@@ -290,7 +308,7 @@ const updatePokemonOfDay = async () => {
     const data = await fetchCompletePokemon({
       query: id,
       isShiny: false,
-      debutData: state.debutData,
+      metadata: state.metadata,
       signalSearch: false,
     });
     refs.openPokemonDayButton.dataset.pokemonId = String(id);
@@ -348,7 +366,7 @@ const setupEvents = () => {
 };
 
 const initialize = async () => {
-  await loadDebutData();
+  await loadMetadata();
 
   try {
     state.pokemonLimit = await getPokemonLimit();
