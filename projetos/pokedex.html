@@ -2,60 +2,177 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Consulte informações sobre Pokémon nesta Pokédex.">
-    <meta name="author" content="Larissa Ember">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Pokédex</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pokédex interativa inspirada em consoles portáteis de duas telas.">
+  <meta name="author" content="Larissa Ember">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pokédex</title>
 </head>
 
 <body>
-    <main aria-labelledby="page-title">
-        <h1 id="page-title" class="sr-only">Pokédex</h1>
+  <a class="skip-link" href="#main-screen-content">Pular para conteúdo principal</a>
 
-        <img class="pokemon__image" alt="" aria-hidden="true" hidden>
+  <main class="pokedex-device" aria-labelledby="page-title">
+    <h1 id="page-title" class="sr-only">Pokédex retrofuturista</h1>
 
-        <h2 class="pokemon__data" aria-live="polite">
-            <span class="pokemon__number"></span>
-            <span aria-hidden="true"> - </span>
-            <span class="pokemon__name"></span>
-        </h2>
-
-        <form class="form" role="search">
-            <label class="sr-only" for="pokemon-search">
-                Pesquisar Pokémon por nome ou número
-            </label>
-            <input id="pokemon-search" name="pokemon" type="search"
-                class="input__search" placeholder="Nome ou número"
-                autocomplete="off" spellcheck="false" required>
-        </form>
-
-        <div class="buttons">
-            <button type="button" class="button btn-prev">Anterior</button>
-            <button type="button" class="button btn-next">Próximo</button>
+    <section class="device-half device-left" aria-label="Tela principal e controles">
+      <header class="device-header" aria-hidden="true">
+        <div class="led led--blue"></div>
+        <div class="led-group">
+          <div class="led led--red"></div>
+          <div class="led led--yellow"></div>
+          <div class="led led--green"></div>
         </div>
+        <span class="screw"></span>
+        <span class="screw"></span>
+      </header>
 
-        <img src="./images/pokedex.png" alt="Ilustração de uma Pokédex" class="pokedex">
-    </main>
+      <div class="main-screen-shell">
+        <section id="main-screen-content" class="screen screen--main" aria-live="polite">
+          <div class="screen-overlay" aria-hidden="true"></div>
+          <p class="status-indicator" id="status-indicator">Conectando...</p>
+          <p class="pokemon-badge" id="mythic-legendary-badge" hidden></p>
+          <img class="pokemon__image" alt="" hidden>
+          <div class="pokemon-core">
+            <h2 class="pokemon__data">
+              <span class="pokemon__number">#0001</span>
+              <span class="pokemon__name">Bulbasaur</span>
+            </h2>
+            <p class="pokemon__name-pt">Bulbasaur</p>
+            <p class="pokemon__meta">
+              <span class="pokemon__species">Semente</span>
+              <span aria-hidden="true">•</span>
+              <span class="pokemon__generation">Geração I</span>
+              <span aria-hidden="true">•</span>
+              <span class="pokemon__region">Kanto</span>
+            </p>
+            <p class="pokemon__types" aria-label="Tipos">grama, veneno</p>
+          </div>
+        </section>
+      </div>
 
-    <section class="pokemon__details" aria-labelledby="details-title" aria-live="polite">
-        <h2 id="details-title">Detalhes</h2>
-        <dl class="details__list">
-            <div><dt>Tipo</dt><dd class="pokemon__types">-</dd></div>
-            <div><dt>Habilidades</dt><dd class="pokemon__abilities">-</dd></div>
-            <div><dt>Altura</dt><dd class="pokemon__height">-</dd></div>
-            <div><dt>Peso</dt><dd class="pokemon__weight">-</dd></div>
-        </dl>
-        <h3>Estatísticas base</h3>
-        <ul class="pokemon__stats"></ul>
+      <section class="left-controls" aria-label="Controles físicos da Pokédex">
+        <div class="speaker-grid" aria-hidden="true"></div>
+        <div class="dpad" role="group" aria-label="Direcional digital">
+          <button type="button" class="control-btn dpad-btn dpad-up" data-action="focus-prev-tab" aria-label="Aba anterior">▲</button>
+          <button type="button" class="control-btn dpad-btn dpad-left btn-prev" data-action="prev" aria-label="Pokémon anterior">◀</button>
+          <button type="button" class="control-btn dpad-btn dpad-right btn-next" data-action="next" aria-label="Próximo Pokémon">▶</button>
+          <button type="button" class="control-btn dpad-btn dpad-down" data-action="focus-next-tab" aria-label="Próxima aba">▼</button>
+        </div>
+        <div class="face-buttons" role="group" aria-label="Botões de ação">
+          <button type="button" class="control-btn face-btn" data-action="confirm" aria-label="Confirmar seleção">A</button>
+          <button type="button" class="control-btn face-btn" data-action="back" aria-label="Voltar para visão geral">B</button>
+        </div>
+        <div class="quick-actions" role="group" aria-label="Ações rápidas">
+          <button type="button" class="control-btn" id="toggle-shiny" aria-pressed="false">Shiny</button>
+          <button type="button" class="control-btn" id="random-pokemon">Aleatório</button>
+          <button type="button" class="control-btn" id="play-cry">Cry</button>
+        </div>
+      </section>
     </section>
 
-    <footer>
-        <a href="../index.html" class="button">Página inicial</a>
-    </footer>
+    <div class="device-hinge" aria-hidden="true"></div>
 
-    <script src="js/script.js" defer></script>
+    <section class="device-half device-right" aria-label="Monitor auxiliar e tela secundária">
+      <section class="aux-screen-shell" aria-labelledby="aux-title">
+        <h2 id="aux-title" class="sr-only">Monitor auxiliar</h2>
+        <div class="screen screen--aux">
+          <header class="aux-header" aria-hidden="true">
+            <span class="led led--red"></span>
+            <span class="led led--green"></span>
+          </header>
+          <p class="aux-line"><strong>ID:</strong> <span class="aux-number">#0001</span></p>
+          <p class="aux-line"><strong>Nome:</strong> <span class="aux-name">Bulbasaur</span></p>
+          <p class="aux-line"><strong>Geração:</strong> <span class="aux-generation">I</span></p>
+          <p class="aux-line"><strong>Região:</strong> <span class="aux-region">Kanto</span></p>
+          <p class="aux-line"><strong>Shiny:</strong> <span class="aux-shiny">OFF</span></p>
+          <div class="aux-types"></div>
+          <img class="aux-sprite" alt="Sprite do Pokémon" hidden>
+        </div>
+      </section>
+
+      <section class="secondary-panel" aria-labelledby="panel-title">
+        <h2 id="panel-title" class="sr-only">Painel de informações e navegação</h2>
+
+        <form class="form search-form" role="search">
+          <label for="pokemon-search">Pesquisar Pokémon por nome ou número</label>
+          <div class="search-row">
+            <input id="pokemon-search" name="pokemon" type="search" class="input__search" placeholder="Nome ou número" autocomplete="off" spellcheck="false" required>
+            <button type="submit" class="control-btn">Buscar</button>
+          </div>
+        </form>
+
+        <div class="panel-buttons" role="group" aria-label="Navegação principal">
+          <button type="button" class="control-btn btn-prev" data-action="prev">Anterior</button>
+          <button type="button" class="control-btn btn-next" data-action="next">Próximo</button>
+          <button type="button" class="control-btn" id="toggle-favorite" aria-pressed="false">Favorito ☆</button>
+          <button type="button" class="control-btn" id="toggle-sound" aria-pressed="true">Som ON</button>
+        </div>
+
+        <div class="panel-buttons" role="group" aria-label="Filtros e coleção">
+          <label for="generation-filter" class="inline-label">Geração</label>
+          <select id="generation-filter" class="inline-select">
+            <option value="all">Todas</option>
+            <option value="generation-i">I · Kanto</option>
+            <option value="generation-ii">II · Johto</option>
+            <option value="generation-iii">III · Hoenn</option>
+            <option value="generation-iv">IV · Sinnoh</option>
+            <option value="generation-v">V · Unova</option>
+            <option value="generation-vi">VI · Kalos</option>
+            <option value="generation-vii">VII · Alola</option>
+            <option value="generation-viii">VIII · Galar</option>
+            <option value="generation-ix">IX · Paldea</option>
+          </select>
+          <label for="collection-status" class="inline-label">Coleção</label>
+          <select id="collection-status" class="inline-select">
+            <option value="missing">Não capturado</option>
+            <option value="caught">Capturado</option>
+            <option value="shiny">Shiny capturado</option>
+            <option value="favorite">Favorito</option>
+          </select>
+          <button type="button" class="control-btn" id="save-collection">Salvar</button>
+        </div>
+
+        <div class="pokemon-day" aria-live="polite">
+          <p><strong>Pokémon do Dia:</strong> <span id="pokemon-of-day"></span></p>
+          <button type="button" class="control-btn" id="open-pokemon-day">Abrir ficha</button>
+        </div>
+
+        <nav class="tabs" aria-label="Seções da Pokédex">
+          <button type="button" class="tab is-active" data-tab="overview">Visão geral</button>
+          <button type="button" class="tab" data-tab="stats">Estatísticas</button>
+          <button type="button" class="tab" data-tab="evolution">Evolução</button>
+          <button type="button" class="tab" data-tab="forms">Formas</button>
+          <button type="button" class="tab" data-tab="abilities">Habilidades</button>
+          <button type="button" class="tab" data-tab="moves">Golpes</button>
+          <button type="button" class="tab" data-tab="games">Jogos</button>
+          <button type="button" class="tab" data-tab="curiosities">Curiosidades</button>
+          <button type="button" class="tab" data-tab="wiki">Wiki</button>
+          <button type="button" class="tab" data-tab="compare">Comparador</button>
+        </nav>
+
+        <section class="tab-panel" id="tab-overview" aria-live="polite"></section>
+        <section class="tab-panel" id="tab-stats" hidden></section>
+        <section class="tab-panel" id="tab-evolution" hidden></section>
+        <section class="tab-panel" id="tab-forms" hidden></section>
+        <section class="tab-panel" id="tab-abilities" hidden></section>
+        <section class="tab-panel" id="tab-moves" hidden></section>
+        <section class="tab-panel" id="tab-games" hidden></section>
+        <section class="tab-panel" id="tab-curiosities" hidden></section>
+        <section class="tab-panel" id="tab-wiki" hidden></section>
+        <section class="tab-panel" id="tab-compare" hidden></section>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <a href="../index.html" class="control-btn">Página inicial</a>
+  </footer>
+
+  <p class="sr-only" aria-live="assertive" id="app-announcer"></p>
+
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
