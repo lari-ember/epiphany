@@ -1,30 +1,275 @@
 {
   "1": {
     "items": [
-      "Bulbasaur aparece como #001 na Pokédex Nacional e é tradicionalmente usado como exemplo de Pokémon inicial de Kanto.",
-      "Seu nome combina 'bulb' com a sonoridade de saurópodes, reforçando o tema de planta + réptil.",
-      "Referências: Bulbapedia, Pokémon Database e Serebii."
+      "Bulbasaur tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=bulbasaur | https://pokemondb.net/pokedex/bulbasaur | https://www.serebii.net/pokedex-sv/bulbasaur/"
+    ]
+  },
+  "4": {
+    "items": [
+      "Charmander tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=charmander | https://pokemondb.net/pokedex/charmander | https://www.serebii.net/pokedex-sv/charmander/"
+    ]
+  },
+  "7": {
+    "items": [
+      "Squirtle tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=squirtle | https://pokemondb.net/pokedex/squirtle | https://www.serebii.net/pokedex-sv/squirtle/"
     ]
   },
   "25": {
     "items": [
-      "Pikachu é o mascote global da franquia Pokémon desde os primeiros anos da série.",
-      "A espécie ganhou múltiplas variantes de distribuição ao longo dos jogos principais e spin-offs.",
-      "Referências: Bulbapedia, Pokémon Database e site oficial Pokémon."
+      "Pikachu tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=pikachu | https://pokemondb.net/pokedex/pikachu | https://www.serebii.net/pokedex-sv/pikachu/"
+    ]
+  },
+  "52": {
+    "items": [
+      "Meowth tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=meowth | https://pokemondb.net/pokedex/meowth | https://www.serebii.net/pokedex-sv/meowth/"
+    ]
+  },
+  "133": {
+    "items": [
+      "Eevee tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=eevee | https://pokemondb.net/pokedex/eevee | https://www.serebii.net/pokedex-sv/eevee/"
     ]
   },
   "150": {
     "items": [
-      "Mewtwo é apresentado como Pokémon lendário criado por engenharia genética a partir de pesquisas com Mew.",
-      "Sua popularidade o colocou em diversos filmes, eventos e formas especiais ao longo da franquia.",
-      "Referências: Bulbapedia e Serebii."
+      "Mewtwo tem estreia associada à região de Kanto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mewtwo | https://pokemondb.net/pokedex/mewtwo | https://www.serebii.net/pokedex-sv/mewtwo/"
+    ]
+  },
+  "152": {
+    "items": [
+      "Chikorita tem estreia associada à região de Johto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chikorita | https://pokemondb.net/pokedex/chikorita | https://www.serebii.net/pokedex-sv/chikorita/"
+    ]
+  },
+  "155": {
+    "items": [
+      "Cyndaquil tem estreia associada à região de Johto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=cyndaquil | https://pokemondb.net/pokedex/cyndaquil | https://www.serebii.net/pokedex-sv/cyndaquil/"
+    ]
+  },
+  "158": {
+    "items": [
+      "Totodile tem estreia associada à região de Johto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=totodile | https://pokemondb.net/pokedex/totodile | https://www.serebii.net/pokedex-sv/totodile/"
+    ]
+  },
+  "249": {
+    "items": [
+      "Lugia tem estreia associada à região de Johto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lugia | https://pokemondb.net/pokedex/lugia | https://www.serebii.net/pokedex-sv/lugia/"
+    ]
+  },
+  "250": {
+    "items": [
+      "Ho-Oh tem estreia associada à região de Johto na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ho-oh | https://pokemondb.net/pokedex/ho-oh | https://www.serebii.net/pokedex-sv/ho-oh/"
+    ]
+  },
+  "252": {
+    "items": [
+      "Treecko tem estreia associada à região de Hoenn na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=treecko | https://pokemondb.net/pokedex/treecko | https://www.serebii.net/pokedex-sv/treecko/"
+    ]
+  },
+  "255": {
+    "items": [
+      "Torchic tem estreia associada à região de Hoenn na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=torchic | https://pokemondb.net/pokedex/torchic | https://www.serebii.net/pokedex-sv/torchic/"
+    ]
+  },
+  "258": {
+    "items": [
+      "Mudkip tem estreia associada à região de Hoenn na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mudkip | https://pokemondb.net/pokedex/mudkip | https://www.serebii.net/pokedex-sv/mudkip/"
+    ]
+  },
+  "280": {
+    "items": [
+      "Ralts tem estreia associada à região de Hoenn na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ralts | https://pokemondb.net/pokedex/ralts | https://www.serebii.net/pokedex-sv/ralts/"
+    ]
+  },
+  "384": {
+    "items": [
+      "Rayquaza tem estreia associada à região de Hoenn na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rayquaza | https://pokemondb.net/pokedex/rayquaza | https://www.serebii.net/pokedex-sv/rayquaza/"
+    ]
+  },
+  "387": {
+    "items": [
+      "Turtwig tem estreia associada à região de Sinnoh na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=turtwig | https://pokemondb.net/pokedex/turtwig | https://www.serebii.net/pokedex-sv/turtwig/"
+    ]
+  },
+  "390": {
+    "items": [
+      "Chimchar tem estreia associada à região de Sinnoh na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chimchar | https://pokemondb.net/pokedex/chimchar | https://www.serebii.net/pokedex-sv/chimchar/"
+    ]
+  },
+  "393": {
+    "items": [
+      "Piplup tem estreia associada à região de Sinnoh na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=piplup | https://pokemondb.net/pokedex/piplup | https://www.serebii.net/pokedex-sv/piplup/"
     ]
   },
   "448": {
     "items": [
-      "Lucario se tornou um dos Pokémon mais reconhecidos da Geração IV, com destaque em mídia fora dos jogos.",
-      "A espécie usa a temática de aura como elemento central de identidade narrativa e visual.",
-      "Referências: Bulbapedia, Pokémon Database e Serebii."
+      "Lucario tem estreia associada à região de Sinnoh na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lucario | https://pokemondb.net/pokedex/lucario | https://www.serebii.net/pokedex-sv/lucario/"
+    ]
+  },
+  "495": {
+    "items": [
+      "Snivy tem estreia associada à região de Unova na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=snivy | https://pokemondb.net/pokedex/snivy | https://www.serebii.net/pokedex-sv/snivy/"
+    ]
+  },
+  "498": {
+    "items": [
+      "Tepig tem estreia associada à região de Unova na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=tepig | https://pokemondb.net/pokedex/tepig | https://www.serebii.net/pokedex-sv/tepig/"
+    ]
+  },
+  "501": {
+    "items": [
+      "Oshawott tem estreia associada à região de Unova na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=oshawott | https://pokemondb.net/pokedex/oshawott | https://www.serebii.net/pokedex-sv/oshawott/"
+    ]
+  },
+  "650": {
+    "items": [
+      "Chespin tem estreia associada à região de Kalos na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chespin | https://pokemondb.net/pokedex/chespin | https://www.serebii.net/pokedex-sv/chespin/"
+    ]
+  },
+  "653": {
+    "items": [
+      "Fennekin tem estreia associada à região de Kalos na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fennekin | https://pokemondb.net/pokedex/fennekin | https://www.serebii.net/pokedex-sv/fennekin/"
+    ]
+  },
+  "656": {
+    "items": [
+      "Froakie tem estreia associada à região de Kalos na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=froakie | https://pokemondb.net/pokedex/froakie | https://www.serebii.net/pokedex-sv/froakie/"
+    ]
+  },
+  "722": {
+    "items": [
+      "Rowlet tem estreia associada à região de Alola na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rowlet | https://pokemondb.net/pokedex/rowlet | https://www.serebii.net/pokedex-sv/rowlet/"
+    ]
+  },
+  "725": {
+    "items": [
+      "Litten tem estreia associada à região de Alola na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=litten | https://pokemondb.net/pokedex/litten | https://www.serebii.net/pokedex-sv/litten/"
+    ]
+  },
+  "728": {
+    "items": [
+      "Popplio tem estreia associada à região de Alola na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=popplio | https://pokemondb.net/pokedex/popplio | https://www.serebii.net/pokedex-sv/popplio/"
+    ]
+  },
+  "778": {
+    "items": [
+      "Mimikyu tem estreia associada à região de Alola na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mimikyu | https://pokemondb.net/pokedex/mimikyu | https://www.serebii.net/pokedex-sv/mimikyu/"
+    ]
+  },
+  "810": {
+    "items": [
+      "Grookey tem estreia associada à região de Galar na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=grookey | https://pokemondb.net/pokedex/grookey | https://www.serebii.net/pokedex-sv/grookey/"
+    ]
+  },
+  "813": {
+    "items": [
+      "Scorbunny tem estreia associada à região de Galar na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=scorbunny | https://pokemondb.net/pokedex/scorbunny | https://www.serebii.net/pokedex-sv/scorbunny/"
+    ]
+  },
+  "816": {
+    "items": [
+      "Sobble tem estreia associada à região de Galar na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sobble | https://pokemondb.net/pokedex/sobble | https://www.serebii.net/pokedex-sv/sobble/"
+    ]
+  },
+  "905": {
+    "items": [
+      "Enamorus tem estreia associada à região de Hisui na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=enamorus | https://pokemondb.net/pokedex/enamorus | https://www.serebii.net/pokedex-sv/enamorus/"
+    ]
+  },
+  "906": {
+    "items": [
+      "Sprigatito tem estreia associada à região de Paldea na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sprigatito | https://pokemondb.net/pokedex/sprigatito | https://www.serebii.net/pokedex-sv/sprigatito/"
+    ]
+  },
+  "909": {
+    "items": [
+      "Fuecoco tem estreia associada à região de Paldea na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fuecoco | https://pokemondb.net/pokedex/fuecoco | https://www.serebii.net/pokedex-sv/fuecoco/"
+    ]
+  },
+  "912": {
+    "items": [
+      "Quaxly tem estreia associada à região de Paldea na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=quaxly | https://pokemondb.net/pokedex/quaxly | https://www.serebii.net/pokedex-sv/quaxly/"
+    ]
+  },
+  "1000": {
+    "items": [
+      "Gholdengo tem estreia associada à região de Paldea na cronologia principal da franquia.",
+      "Esta seção usa curadoria manual e só exibe notas editoriais com referência externa registrada.",
+      "Fontes: https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=gholdengo | https://pokemondb.net/pokedex/gholdengo | https://www.serebii.net/pokedex-sv/gholdengo/"
     ]
   }
 }

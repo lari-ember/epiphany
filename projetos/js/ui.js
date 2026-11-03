@@ -289,7 +289,7 @@ const setupUI = () => {
 
     const availability = pokemon.availability;
     if (availability) {
-      list.appendChild(createElement('p', null, `Capturável em: ${availability.catchableIn?.join(', ') || 'Informação não cadastrada'}`));
+      list.appendChild(createElement('p', null, `Disponível em gameplay: ${availability.catchableIn?.join(', ') || 'Informação não cadastrada'}`));
       list.appendChild(createElement('p', null, `Transferência apenas em: ${availability.transferOnlyIn?.join(', ') || 'Informação não cadastrada'}`));
       list.appendChild(createElement('p', null, `Não disponível: ${availability.notAvailableIn?.join(', ') || 'Informação não cadastrada'}`));
       list.appendChild(createElement('p', null, `Fonte de disponibilidade: ${availability.source ?? 'Informação não cadastrada'}`));

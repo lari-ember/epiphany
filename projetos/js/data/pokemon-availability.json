@@ -1,44 +1,330 @@
 {
   "1": {
-    "catchableIn": ["Pokémon Red/Blue", "Pokémon FireRed/LeafGreen", "Pokémon Let's Go"],
-    "transferOnlyIn": ["Pokémon Sword/Shield (HOME)", "Pokémon Scarlet/Violet (HOME)"],
-    "notAvailableIn": ["Pokémon Legends: Arceus"],
-    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
-  },
-  "25": {
-    "catchableIn": ["Pokémon Yellow", "Pokémon Let's Go Pikachu", "Pokémon Scarlet/Violet"],
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
     "transferOnlyIn": [],
     "notAvailableIn": [],
-    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=bulbasaur | https://pokemondb.net/pokedex/bulbasaur | https://www.serebii.net/pokedex-sv/bulbasaur/"
+  },
+  "4": {
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=charmander | https://pokemondb.net/pokedex/charmander | https://www.serebii.net/pokedex-sv/charmander/"
+  },
+  "7": {
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=squirtle | https://pokemondb.net/pokedex/squirtle | https://www.serebii.net/pokedex-sv/squirtle/"
+  },
+  "25": {
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=pikachu | https://pokemondb.net/pokedex/pikachu | https://www.serebii.net/pokedex-sv/pikachu/"
+  },
+  "52": {
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=meowth | https://pokemondb.net/pokedex/meowth | https://www.serebii.net/pokedex-sv/meowth/"
+  },
+  "133": {
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=eevee | https://pokemondb.net/pokedex/eevee | https://www.serebii.net/pokedex-sv/eevee/"
   },
   "150": {
-    "catchableIn": ["Pokémon Red/Blue (evento local)", "Pokémon Let's Go", "Pokémon Sword/Shield (DLC)"],
-    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
+    "catchableIn": [
+      "Pokémon Red & Green (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
     "notAvailableIn": [],
-    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mewtwo | https://pokemondb.net/pokedex/mewtwo | https://www.serebii.net/pokedex-sv/mewtwo/"
+  },
+  "152": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chikorita | https://pokemondb.net/pokedex/chikorita | https://www.serebii.net/pokedex-sv/chikorita/"
+  },
+  "155": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=cyndaquil | https://pokemondb.net/pokedex/cyndaquil | https://www.serebii.net/pokedex-sv/cyndaquil/"
+  },
+  "158": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=totodile | https://pokemondb.net/pokedex/totodile | https://www.serebii.net/pokedex-sv/totodile/"
+  },
+  "196": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=espeon | https://pokemondb.net/pokedex/espeon | https://www.serebii.net/pokedex-sv/espeon/"
+  },
+  "197": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=umbreon | https://pokemondb.net/pokedex/umbreon | https://www.serebii.net/pokedex-sv/umbreon/"
   },
   "249": {
-    "catchableIn": ["Pokémon Gold/Silver", "Pokémon HeartGold/SoulSilver"],
-    "transferOnlyIn": ["Pokémon Sword/Shield (DLC)", "Pokémon Scarlet/Violet (HOME)"],
-    "notAvailableIn": ["Pokémon Black/White sem transferência"],
-    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lugia | https://pokemondb.net/pokedex/lugia | https://www.serebii.net/pokedex-sv/lugia/"
+  },
+  "250": {
+    "catchableIn": [
+      "Pokémon Gold & Silver (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ho-oh | https://pokemondb.net/pokedex/ho-oh | https://www.serebii.net/pokedex-sv/ho-oh/"
+  },
+  "252": {
+    "catchableIn": [
+      "Pokémon Ruby & Sapphire (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=treecko | https://pokemondb.net/pokedex/treecko | https://www.serebii.net/pokedex-sv/treecko/"
+  },
+  "255": {
+    "catchableIn": [
+      "Pokémon Ruby & Sapphire (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=torchic | https://pokemondb.net/pokedex/torchic | https://www.serebii.net/pokedex-sv/torchic/"
+  },
+  "258": {
+    "catchableIn": [
+      "Pokémon Ruby & Sapphire (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mudkip | https://pokemondb.net/pokedex/mudkip | https://www.serebii.net/pokedex-sv/mudkip/"
+  },
+  "280": {
+    "catchableIn": [
+      "Pokémon Ruby & Sapphire (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=ralts | https://pokemondb.net/pokedex/ralts | https://www.serebii.net/pokedex-sv/ralts/"
   },
   "384": {
-    "catchableIn": ["Pokémon Ruby/Sapphire", "Pokémon Emerald", "Pokémon Omega Ruby/Alpha Sapphire"],
-    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
+    "catchableIn": [
+      "Pokémon Ruby & Sapphire (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
     "notAvailableIn": [],
-    "source": "Curadoria manual baseada em Bulbapedia e Pokémon Database"
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rayquaza | https://pokemondb.net/pokedex/rayquaza | https://www.serebii.net/pokedex-sv/rayquaza/"
   },
-  "658": {
-    "catchableIn": ["Pokémon X/Y", "Pokémon Scarlet/Violet (DLC)"],
-    "transferOnlyIn": ["Pokémon Sword/Shield (HOME)"],
+  "387": {
+    "catchableIn": [
+      "Pokémon Diamond & Pearl (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
     "notAvailableIn": [],
-    "source": "Curadoria manual baseada em Bulbapedia, Pokémon Database e Serebii"
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=turtwig | https://pokemondb.net/pokedex/turtwig | https://www.serebii.net/pokedex-sv/turtwig/"
+  },
+  "390": {
+    "catchableIn": [
+      "Pokémon Diamond & Pearl (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chimchar | https://pokemondb.net/pokedex/chimchar | https://www.serebii.net/pokedex-sv/chimchar/"
+  },
+  "393": {
+    "catchableIn": [
+      "Pokémon Diamond & Pearl (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=piplup | https://pokemondb.net/pokedex/piplup | https://www.serebii.net/pokedex-sv/piplup/"
+  },
+  "448": {
+    "catchableIn": [
+      "Pokémon Diamond & Pearl (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=lucario | https://pokemondb.net/pokedex/lucario | https://www.serebii.net/pokedex-sv/lucario/"
+  },
+  "495": {
+    "catchableIn": [
+      "Pokémon Black & White (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=snivy | https://pokemondb.net/pokedex/snivy | https://www.serebii.net/pokedex-sv/snivy/"
+  },
+  "498": {
+    "catchableIn": [
+      "Pokémon Black & White (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=tepig | https://pokemondb.net/pokedex/tepig | https://www.serebii.net/pokedex-sv/tepig/"
+  },
+  "501": {
+    "catchableIn": [
+      "Pokémon Black & White (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=oshawott | https://pokemondb.net/pokedex/oshawott | https://www.serebii.net/pokedex-sv/oshawott/"
+  },
+  "650": {
+    "catchableIn": [
+      "Pokémon X & Y (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=chespin | https://pokemondb.net/pokedex/chespin | https://www.serebii.net/pokedex-sv/chespin/"
+  },
+  "653": {
+    "catchableIn": [
+      "Pokémon X & Y (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fennekin | https://pokemondb.net/pokedex/fennekin | https://www.serebii.net/pokedex-sv/fennekin/"
+  },
+  "656": {
+    "catchableIn": [
+      "Pokémon X & Y (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=froakie | https://pokemondb.net/pokedex/froakie | https://www.serebii.net/pokedex-sv/froakie/"
+  },
+  "722": {
+    "catchableIn": [
+      "Pokémon Sun & Moon (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=rowlet | https://pokemondb.net/pokedex/rowlet | https://www.serebii.net/pokedex-sv/rowlet/"
+  },
+  "725": {
+    "catchableIn": [
+      "Pokémon Sun & Moon (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=litten | https://pokemondb.net/pokedex/litten | https://www.serebii.net/pokedex-sv/litten/"
+  },
+  "728": {
+    "catchableIn": [
+      "Pokémon Sun & Moon (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=popplio | https://pokemondb.net/pokedex/popplio | https://www.serebii.net/pokedex-sv/popplio/"
+  },
+  "778": {
+    "catchableIn": [
+      "Pokémon Sun & Moon (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=mimikyu | https://pokemondb.net/pokedex/mimikyu | https://www.serebii.net/pokedex-sv/mimikyu/"
+  },
+  "810": {
+    "catchableIn": [
+      "Pokémon Sword & Shield (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=grookey | https://pokemondb.net/pokedex/grookey | https://www.serebii.net/pokedex-sv/grookey/"
+  },
+  "813": {
+    "catchableIn": [
+      "Pokémon Sword & Shield (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=scorbunny | https://pokemondb.net/pokedex/scorbunny | https://www.serebii.net/pokedex-sv/scorbunny/"
+  },
+  "816": {
+    "catchableIn": [
+      "Pokémon Sword & Shield (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sobble | https://pokemondb.net/pokedex/sobble | https://www.serebii.net/pokedex-sv/sobble/"
   },
   "905": {
-    "catchableIn": ["Pokémon Legends: Arceus"],
-    "transferOnlyIn": ["Pokémon Scarlet/Violet (HOME)"],
-    "notAvailableIn": ["Jogos principais anteriores à Geração VIII"],
-    "source": "Curadoria manual baseada em Bulbapedia e Serebii"
+    "catchableIn": [
+      "Pokémon Legends: Arceus (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=enamorus | https://pokemondb.net/pokedex/enamorus | https://www.serebii.net/pokedex-sv/enamorus/"
+  },
+  "906": {
+    "catchableIn": [
+      "Pokémon Scarlet & Violet (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=sprigatito | https://pokemondb.net/pokedex/sprigatito | https://www.serebii.net/pokedex-sv/sprigatito/"
+  },
+  "909": {
+    "catchableIn": [
+      "Pokémon Scarlet & Violet (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=fuecoco | https://pokemondb.net/pokedex/fuecoco | https://www.serebii.net/pokedex-sv/fuecoco/"
+  },
+  "912": {
+    "catchableIn": [
+      "Pokémon Scarlet & Violet (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=quaxly | https://pokemondb.net/pokedex/quaxly | https://www.serebii.net/pokedex-sv/quaxly/"
+  },
+  "1000": {
+    "catchableIn": [
+      "Pokémon Scarlet & Violet (disponível em gameplay principal)"
+    ],
+    "transferOnlyIn": [],
+    "notAvailableIn": [],
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Special:Search?search=gholdengo | https://pokemondb.net/pokedex/gholdengo | https://www.serebii.net/pokedex-sv/gholdengo/"
   }
 }
